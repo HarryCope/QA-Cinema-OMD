@@ -10,7 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Films {
+public class Film {
 
 		//Create the attributes of "Films"
 		@Id
@@ -138,7 +138,7 @@ public class Films {
 				return false;
 			if (getClass() != obj.getClass())
 				return false;
-			Films other = (Films) obj;
+			Film other = (Film) obj;
 			return Objects.equals(filmAgeRating, other.filmAgeRating) && Objects.equals(filmCast, other.filmCast)
 					&& Objects.equals(filmDirectors, other.filmDirectors)
 					&& Objects.equals(filmGenres, other.filmGenres) && Objects.equals(filmName, other.filmName)
