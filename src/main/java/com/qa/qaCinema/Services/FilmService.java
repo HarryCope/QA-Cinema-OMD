@@ -27,8 +27,8 @@ public class FilmService {
 	}
 	
 	//Read
-	public Film readFilm(Long film_Id) {
-		return repo.findById(film_Id).get();
+	public Film readFilm(Long filmId) {
+		return repo.findById(filmId).get();
 	}
 	
 	public List<Film> readAllFilms() {
@@ -36,15 +36,15 @@ public class FilmService {
 	}
 	
 	//Update
-	public Film updateFilm(Film updateFilm, Long film_Id) {
+	public Film updateFilm(Film updateFilm, Long filmId) {
 		
-		Optional<Film> currentFilm = this.repo.findById(film_Id);
+		Optional<Film> currentFilm = this.repo.findById(filmId);
 	
 		if (currentFilm.get() instanceof Film) {
 			Film oldFilm = currentFilm.get();
 			
 			oldFilm.setFilmName(updateFilm.getFilmName());
-			oldFilm.setFilm_Id(updateFilm.getFilm_Id());
+			oldFilm.setFilm_Id(filmId);
 			oldFilm.setFilmRating(updateFilm.getFilmRating());
 			oldFilm.setFilmReleaseDate(updateFilm.getFilmReleaseDate());
 			oldFilm.setFilmAgeRating(updateFilm.getFilmAgeRating());
@@ -61,15 +61,15 @@ public class FilmService {
 	}
 	
 	//Delete
-	public boolean deleteByFilmId(Long film_Id) {
-		Optional<Film> currentFilm = this.repo.findById(film_Id);
+	public boolean deleteByFilmId(Long filmId) {
+		Optional<Film> currentFilm = this.repo.findById(filmId);
 		
 		//Ternary Statement we need to ensure we use it within a variable
 		
 		boolean isPresent = (currentFilm.isPresent()) ?  true : false;
 		
 		if (isPresent) {
-			this.repo.deleteById(film_Id);
+			this.repo.deleteById(filmId);
 			return true;
 		} else {
 //			throw new Exception();

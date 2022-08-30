@@ -41,15 +41,15 @@ public class FilmController {
 		return new ResponseEntity<Film>(createFilm, HttpStatus.CREATED);
 	}
 	
-	@PutMapping("/updateFilm/{film_Id}")
-	public ResponseEntity<Film> updateFilm(@RequestBody Film film, @PathVariable Long film_Id) {
-		Film updateFilm = service.updateFilm(film, film_Id);
+	@PutMapping("/updateFilm/{filmId}")
+	public ResponseEntity<Film> updateFilm(@RequestBody Film film, @PathVariable Long filmId) {
+		Film updateFilm = service.updateFilm(film, filmId);
 		return new ResponseEntity<Film>(updateFilm, HttpStatus.OK);
 	}
 	
-	@DeleteMapping("/deleteFilm/{film_Id}")
-	public ResponseEntity<Boolean> deleteFilm(@PathVariable Long film_Id) {
-		Boolean deletedFilm = service.deleteByFilmId(film_Id);
+	@DeleteMapping("/deleteFilm/{filmId}")
+	public ResponseEntity<Boolean> deleteFilm(@PathVariable Long filmId) {
+		Boolean deletedFilm = service.deleteByFilmId(filmId);
 		return new ResponseEntity<Boolean>(deletedFilm, HttpStatus.NO_CONTENT);
 	}
 }
