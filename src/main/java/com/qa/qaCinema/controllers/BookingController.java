@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.qa.qaCinema.Services.BookingService;
 import com.qa.qaCinema.models.Booking;
 
 @RestController
@@ -30,13 +31,13 @@ public class BookingController {
 	
 	@GetMapping("/getBooking")
 	public ResponseEntity <List<Booking>> getBooking() {
-		List<Booking> bookingData = service.readAllBooking();
+		List<Booking> bookingData = service.readAllBookings();
 		return new ResponseEntity<List<Booking>>(bookingData, HttpStatus.OK);
 	}
 	
 	@PostMapping("/createBooking")
 	public ResponseEntity<Booking> createBooking(@RequestBody Booking booking) {
-		Booking createBooking = service.createBooking(booking);
+		Booking createBooking = service.addBooking(booking);
 		return new ResponseEntity<Booking>(createBooking, HttpStatus.CREATED);
 	}
 	
@@ -48,7 +49,7 @@ public class BookingController {
 	
 	@DeleteMapping("/deleteBooking/{booking_Id}")
 	public ResponseEntity<Boolean> deleteBooking(@PathVariable Long bookingId) {
-		Boolean deletedBooking = service.deleteBooking(bookingId);
+		Boolean deletedBooking = service.deleteByBookingId(bookingId);
 		return new ResponseEntity<Boolean>(deletedBooking, HttpStatus.NO_CONTENT);
 	}
 }
