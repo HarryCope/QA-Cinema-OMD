@@ -1,9 +1,13 @@
 package com.qa.qaCinema.Services;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.qa.qaCinema.Repo.BookingRepo;
+import com.qa.qaCinema.models.Booking;
 
 @Service
 public class BookingService {
@@ -17,13 +21,13 @@ public class BookingService {
 	}
 
 	// Create
-	public Booking addFilm(Booking booking) {
-		return repo.save(Booking);
+	public Booking addBooking(Booking booking) {
+		return repo.save(booking);
 	}
 
 	// Read
-	public Booking readBooking(Long bookingId) {
-		return repo.findById(bookingId).get();
+	public Booking readBooking(Long Booking_Id) {
+		return repo.findById(Booking_Id).get();
 	}
 
 	public List<Booking> readAllBookings() {
@@ -38,12 +42,12 @@ public class BookingService {
 		if (currentBooking.get() instanceof Booking) {
 			Booking oldBooking = currentBooking.get();
 
-			oldBooking.setbookingId(updateBooking.getbookingId());
-			oldBooking.setbookingName(updateBooking.getbookingName());
-			oldBooking.setbookingScreen(updateBooking.getbookingScreen());
-			oldBooking.setbookingSeatNumber(updateBooking.getbookingSeatNumber());
-			oldBooking.setbookingTime(updateBooking.getbookingTime());
-			oldBooking.setbookingPrice(updateBooking.getbookingPrice());
+			oldBooking.setBooking_Id(updateBooking.getBooking_Id());
+			oldBooking.setBookingName(updateBooking.getBookingName());
+			oldBooking.setBookingScreen(updateBooking.getBookingScreen());
+			oldBooking.setBookingSeatNumber(updateBooking.getBookingSeatNumber());
+			oldBooking.setBookingTime(updateBooking.getBookingTime());
+			oldBooking.setBookingTime(updateBooking.getBookingPrice());
 
 			return repo.save(oldBooking);
 		}
@@ -53,15 +57,15 @@ public class BookingService {
 	}
 
 	// Delete
-	public boolean deleteByBookingID(Long bookingId) {
-		Optional<Booking> currentFilm = this.repo.findById(bookingId);
+	public boolean deleteByBookingID(Long Booking_Id) {
+		Optional<Booking> currentBooking = this.repo.findById(Booking_Id);
 
 		// Ternary Statement we need to ensure we use it within a variable
 
-		boolean isPresent = (currentFilm.isPresent()) ? true : false;
+		boolean isPresent = (currentBooking.isPresent()) ? true : false;
 
 		if (isPresent) {
-			this.repo.deleteById(bookingId);
+			this.repo.deleteById(Booking_Id);
 			return true;
 		} else {
 //			throw new Exception();
