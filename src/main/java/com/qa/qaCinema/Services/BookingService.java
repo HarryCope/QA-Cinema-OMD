@@ -42,7 +42,7 @@ public class BookingService {
 		if (currentBooking.get() instanceof Booking) {
 			Booking oldBooking = currentBooking.get();
 
-			oldBooking.setBooking_Id(bookingId);
+			oldBooking.setBooking_Id(updateBooking.getBooking_Id());
 			oldBooking.setBookingName(updateBooking.getBookingName());
 			oldBooking.setBookingScreen(updateBooking.getBookingScreen());
 			oldBooking.setBookingSeatNumber(updateBooking.getBookingSeatNumber());
@@ -58,11 +58,11 @@ public class BookingService {
 
 	// Delete
 	public boolean deleteByBookingID(Long Booking_Id) {
-		Optional<Booking> currentFilm = this.repo.findById(Booking_Id);
+		Optional<Booking> currentBooking = this.repo.findById(Booking_Id);
 
 		// Ternary Statement we need to ensure we use it within a variable
 
-		boolean isPresent = (currentFilm.isPresent()) ? true : false;
+		boolean isPresent = (currentBooking.isPresent()) ? true : false;
 
 		if (isPresent) {
 			this.repo.deleteById(Booking_Id);
