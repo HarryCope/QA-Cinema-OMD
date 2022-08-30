@@ -1,6 +1,13 @@
 package com.qa.qaCinema.Services;
 
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.qa.qaCinema.Repo.FilmRepo;
+import com.qa.qaCinema.models.Film;
 
 @Service
 public class FilmService {
@@ -36,15 +43,15 @@ public class FilmService {
 		if (currentFilm.get() instanceof Film) {
 			Film oldFilm = currentFilm.get();
 			
-			oldFilm.setfilmName(updateFilm.getfilmName());
-			oldFilm.setfilm_Id(updateFilm.getfilm_Id());
-			oldFilm.setfilmRating(updateFilm.getfilmRating());
-			oldFilm.setfilmReleaseDate(updateFilm.getfilmReleaseDate());
-			oldFilm.setfilmAgeRating(updateFilm.getfilmAgeRating());
-			oldFilm.setfilmSynopsis(updateFilm.getfilmSynopsis());
-			oldFilm.setfilmCast(updateFilm.getfilmCast());
-			oldFilm.setfilmDirectors(updateFilm.getfilmDirectors());
-			oldFilm.setfilmGenres(updateFilm.getfilmGenres());
+			oldFilm.setFilmName(updateFilm.getFilmName());
+			oldFilm.setFilm_Id(updateFilm.getFilm_Id());
+			oldFilm.setFilmRating(updateFilm.getFilmRating());
+			oldFilm.setFilmReleaseDate(updateFilm.getFilmReleaseDate());
+			oldFilm.setFilmAgeRating(updateFilm.getFilmAgeRating());
+			oldFilm.setFilmSynopsis(updateFilm.getFilmSynopsis());
+			oldFilm.setFilmCast(updateFilm.getFilmCast());
+			oldFilm.setFilmDirectors(updateFilm.getFilmDirectors());
+			oldFilm.setFilmGenres(updateFilm.getFilmGenres());
 			
 			return repo.save(oldFilm);
 		}
@@ -54,7 +61,7 @@ public class FilmService {
 	}
 	
 	//Delete
-	public boolean deleteByFilmID(Long film_Id) {
+	public boolean deleteByFilmId(Long film_Id) {
 		Optional<Film> currentFilm = this.repo.findById(film_Id);
 		
 		//Ternary Statement we need to ensure we use it within a variable
@@ -71,6 +78,4 @@ public class FilmService {
 	}
 }
 
-	
-	
-}
+
