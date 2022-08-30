@@ -20,8 +20,8 @@ public class FilmService {
 	}
 	
 	//Read
-	public Film readFilm(Long Film_ID) {
-		return repo.findById(Film_ID).get();
+	public Film readFilm(Long film_Id) {
+		return repo.findById(film_Id).get();
 	}
 	
 	public List<Film> readAllFilms() {
@@ -29,21 +29,22 @@ public class FilmService {
 	}
 	
 	//Update
-	public Film updateFilm(Film updateFilm, Long Film_ID) {
+	public Film updateFilm(Film updateFilm, Long film_Id) {
 		
-		Optional<Film> currentFilm = this.repo.findById(Film_ID);
+		Optional<Film> currentFilm = this.repo.findById(film_Id);
 	
 		if (currentFilm.get() instanceof Film) {
 			Film oldFilm = currentFilm.get();
 			
-			oldFilm.setFilm_Name(updateFilm.getFilm_Name());
-			oldFilm.setFilm_ID(updateFilm.getFilm_ID());
-			oldFilm.setRating(updateFilm.getRating());
-			oldFilm.setRelease_Date(updateFilm.getRelease_Date());
-			oldFilm.setAge_Rating(updateFilm.getAge_Rating());
-			oldFilm.setSynopsis(updateFilm.getSynopsis());
-			oldFilm.setCast(updateFilm.getCast());
-			oldFilm.setDirectors(updateFilm.getDirectors());
+			oldFilm.setfilmName(updateFilm.getfilmName());
+			oldFilm.setfilm_Id(updateFilm.getfilm_Id());
+			oldFilm.setfilmRating(updateFilm.getfilmRating());
+			oldFilm.setfilmReleaseDate(updateFilm.getfilmReleaseDate());
+			oldFilm.setfilmAgeRating(updateFilm.getfilmAgeRating());
+			oldFilm.setfilmSynopsis(updateFilm.getfilmSynopsis());
+			oldFilm.setfilmCast(updateFilm.getfilmCast());
+			oldFilm.setfilmDirectors(updateFilm.getfilmDirectors());
+			oldFilm.setfilmGenres(updateFilm.getfilmGenres());
 			
 			return repo.save(oldFilm);
 		}
@@ -53,15 +54,15 @@ public class FilmService {
 	}
 	
 	//Delete
-	public boolean deleteByFilmID(Long Film_ID) {
-		Optional<Film> currentFilm = this.repo.findById(Film_ID);
+	public boolean deleteByFilmID(Long film_Id) {
+		Optional<Film> currentFilm = this.repo.findById(film_Id);
 		
 		//Ternary Statement we need to ensure we use it within a variable
 		
 		boolean isPresent = (currentFilm.isPresent()) ?  true : false;
 		
 		if (isPresent) {
-			this.repo.deleteById(Film_ID);
+			this.repo.deleteById(film_Id);
 			return true;
 		} else {
 //			throw new Exception();
