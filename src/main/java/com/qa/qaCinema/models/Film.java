@@ -12,6 +12,38 @@ import javax.persistence.Id;
 @Entity
 public class Film {
 
+		public Film() {
+		super();
+	}
+
+		public Film(String filmName, String filmRating, String filmReleaseDate, String filmAgeRating, String filmSynopsis,
+			ArrayList<String> filmCast, ArrayList<String> filmDirectors, ArrayList<String> filmGenres) {
+		super();
+		this.filmName = filmName;
+		this.filmRating = filmRating;
+		this.filmReleaseDate = filmReleaseDate;
+		this.filmAgeRating = filmAgeRating;
+		this.filmSynopsis = filmSynopsis;
+		this.filmCast = filmCast;
+		this.filmDirectors = filmDirectors;
+		this.filmGenres = filmGenres;
+	}
+
+		public Film(Long filmId, String filmName, String filmRating, String filmReleaseDate, String filmAgeRating,
+			String filmSynopsis, ArrayList<String> filmCast, ArrayList<String> filmDirectors,
+			ArrayList<String> filmGenres) {
+		super();
+		this.filmId = filmId;
+		this.filmName = filmName;
+		this.filmRating = filmRating;
+		this.filmReleaseDate = filmReleaseDate;
+		this.filmAgeRating = filmAgeRating;
+		this.filmSynopsis = filmSynopsis;
+		this.filmCast = filmCast;
+		this.filmDirectors = filmDirectors;
+		this.filmGenres = filmGenres;
+	}
+
 		//Create the attributes of "Films"
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -127,7 +159,7 @@ public class Film {
 		@Override
 		public int hashCode() {
 			return Objects.hash(filmAgeRating, filmCast, filmDirectors, filmGenres, filmName, filmRating,
-					filmReleaseDate, filmSynopsis, filmId);
+					filmReleaseDate, filmSynopsis);
 		}
 
 		@Override
@@ -144,7 +176,7 @@ public class Film {
 					&& Objects.equals(filmGenres, other.filmGenres) && Objects.equals(filmName, other.filmName)
 					&& Objects.equals(filmRating, other.filmRating)
 					&& Objects.equals(filmReleaseDate, other.filmReleaseDate)
-					&& Objects.equals(filmSynopsis, other.filmSynopsis) && Objects.equals(filmId, other.filmId);
+					&& Objects.equals(filmSynopsis, other.filmSynopsis);
 		}
 			
 }
