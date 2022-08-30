@@ -15,7 +15,7 @@ public class Films {
 		//Create the attributes of "Films"
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
-		private Long id;
+		private Long film_Id;
 		
 		@Column
 		private String filmName;
@@ -43,12 +43,13 @@ public class Films {
 		
 		
 		//Create the getters and setters
-		public Long getId() {
-			return id;
+
+		public Long getFilm_Id() {
+			return film_Id;
 		}
 
-		public void setId(Long id) {
-			this.id = id;
+		public void setFilm_Id(Long film_Id) {
+			this.film_Id = film_Id;
 		}
 
 		public String getFilmName() {
@@ -117,16 +118,16 @@ public class Films {
 
 		@Override
 		public String toString() {
-			return "Films [id=" + id + ", filmName=" + filmName + ", filmRating=" + filmRating + ", filmReleaseDate="
-					+ filmReleaseDate + ", filmAgeRating=" + filmAgeRating + ", filmSynopsis=" + filmSynopsis
-					+ ", filmCast=" + filmCast + ", filmDirectors=" + filmDirectors + ", filmGenres=" + filmGenres
-					+ "]";
+			return "Films [film_Id=" + film_Id + ", filmName=" + filmName + ", filmRating=" + filmRating
+					+ ", filmReleaseDate=" + filmReleaseDate + ", filmAgeRating=" + filmAgeRating + ", filmSynopsis="
+					+ filmSynopsis + ", filmCast=" + filmCast + ", filmDirectors=" + filmDirectors + ", filmGenres="
+					+ filmGenres + "]";
 		}
 
 		@Override
 		public int hashCode() {
 			return Objects.hash(filmAgeRating, filmCast, filmDirectors, filmGenres, filmName, filmRating,
-					filmReleaseDate, filmSynopsis, id);
+					filmReleaseDate, filmSynopsis, film_Id);
 		}
 
 		@Override
@@ -143,7 +144,7 @@ public class Films {
 					&& Objects.equals(filmGenres, other.filmGenres) && Objects.equals(filmName, other.filmName)
 					&& Objects.equals(filmRating, other.filmRating)
 					&& Objects.equals(filmReleaseDate, other.filmReleaseDate)
-					&& Objects.equals(filmSynopsis, other.filmSynopsis) && Objects.equals(id, other.id);
+					&& Objects.equals(filmSynopsis, other.filmSynopsis) && Objects.equals(film_Id, other.film_Id);
 		}
 			
 }
