@@ -21,7 +21,7 @@ public class BookingService {
 	}
 
 	// Create
-	public Booking addFilm(Booking booking) {
+	public Booking addBooking(Booking booking) {
 		return repo.save(booking);
 	}
 
@@ -42,7 +42,7 @@ public class BookingService {
 		if (currentBooking.get() instanceof Booking) {
 			Booking oldBooking = currentBooking.get();
 
-			oldBooking.setBooking_Id(updateBooking.getBooking_Id());
+			oldBooking.setBooking_Id(bookingId);
 			oldBooking.setBookingName(updateBooking.getBookingName());
 			oldBooking.setBookingScreen(updateBooking.getBookingScreen());
 			oldBooking.setBookingSeatNumber(updateBooking.getBookingSeatNumber());
