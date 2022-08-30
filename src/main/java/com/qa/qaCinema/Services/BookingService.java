@@ -18,9 +18,12 @@ public class BookingService {
 
 	// Create
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	public Booking addFilm(Booking booking) {
 		return repo.save(Booking);
 =======
+=======
+>>>>>>> Stashed changes
 	public Booking addBooking(Booking booking) {
 		return repo.save(booking);
 >>>>>>> Stashed changes
@@ -59,9 +62,12 @@ public class BookingService {
 
 	// Delete
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	public boolean deleteByBookingID(Long bookingId) {
 		Optional<Booking> currentFilm = this.repo.findById(bookingId);
 =======
+=======
+>>>>>>> Stashed changes
 	public boolean deleteByBookingId(Long Booking_Id) {
 		Optional<Booking> currentFilm = this.repo.findById(Booking_Id);
 >>>>>>> Stashed changes
