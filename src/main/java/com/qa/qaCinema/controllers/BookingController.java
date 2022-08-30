@@ -41,14 +41,14 @@ public class BookingController {
 	}
 	
 	@PutMapping("/updateBooking/{booking_Id}")
-	public ResponseEntity<Booking> updateBooking(@RequestBody Booking booking, @PathVariable Long bookingId) {
-		Booking updateBooking = service.updateBooking(booking, bookingId);
+	public ResponseEntity<Booking> updateBooking(@RequestBody Booking booking, @PathVariable Long booking_Id) {
+		Booking updateBooking = service.updateBooking(booking, booking_Id);
 		return new ResponseEntity<Booking>(updateBooking, HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/deleteBooking/{booking_Id}")
-	public ResponseEntity<Boolean> deleteBooking(@PathVariable Long bookingId) {
-		Boolean deletedBooking = service.deleteByBookingID(bookingId);
+	public ResponseEntity<Boolean> deleteBooking(@PathVariable Long booking_Id) {
+		Boolean deletedBooking = service.deleteByBookingID(booking_Id);
 		return new ResponseEntity<Boolean>(deletedBooking, HttpStatus.NO_CONTENT);
 	}
 }
