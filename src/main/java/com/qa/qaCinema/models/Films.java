@@ -37,7 +37,11 @@ public class Films {
 		
 		@Column
 		private ArrayList<String> filmDirectors;
-
+		
+		@Column
+		private ArrayList<String> filmGenres;
+		
+		
 		//Create the getters and setters
 		public Long getId() {
 			return id;
@@ -102,22 +106,29 @@ public class Films {
 		public void setFilmDirectors(ArrayList<String> filmDirectors) {
 			this.filmDirectors = filmDirectors;
 		}
+		
+		public ArrayList<String> getFilmGenres() {
+			return filmGenres;
+		}
 
-		//Create the toString
+		public void setFilmGenres(ArrayList<String> filmGenres) {
+			this.filmGenres = filmGenres;
+		}
+
 		@Override
 		public String toString() {
 			return "Films [id=" + id + ", filmName=" + filmName + ", filmRating=" + filmRating + ", filmReleaseDate="
 					+ filmReleaseDate + ", filmAgeRating=" + filmAgeRating + ", filmSynopsis=" + filmSynopsis
-					+ ", filmCast=" + filmCast + ", filmDirectors=" + filmDirectors + "]";
+					+ ", filmCast=" + filmCast + ", filmDirectors=" + filmDirectors + ", filmGenres=" + filmGenres
+					+ "]";
 		}
 
 		@Override
 		public int hashCode() {
-			return Objects.hash(filmAgeRating, filmCast, filmDirectors, filmName, filmRating, filmReleaseDate,
-					filmSynopsis, id);
+			return Objects.hash(filmAgeRating, filmCast, filmDirectors, filmGenres, filmName, filmRating,
+					filmReleaseDate, filmSynopsis, id);
 		}
 
-		//Create the hashcode
 		@Override
 		public boolean equals(Object obj) {
 			if (this == obj)
@@ -128,7 +139,8 @@ public class Films {
 				return false;
 			Films other = (Films) obj;
 			return Objects.equals(filmAgeRating, other.filmAgeRating) && Objects.equals(filmCast, other.filmCast)
-					&& Objects.equals(filmDirectors, other.filmDirectors) && Objects.equals(filmName, other.filmName)
+					&& Objects.equals(filmDirectors, other.filmDirectors)
+					&& Objects.equals(filmGenres, other.filmGenres) && Objects.equals(filmName, other.filmName)
 					&& Objects.equals(filmRating, other.filmRating)
 					&& Objects.equals(filmReleaseDate, other.filmReleaseDate)
 					&& Objects.equals(filmSynopsis, other.filmSynopsis) && Objects.equals(id, other.id);
