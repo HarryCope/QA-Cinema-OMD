@@ -22,8 +22,8 @@ public class BookingService {
 	}
 
 	// Read
-	public Booking readBooking(Long booking_Id) {
-		return repo.findById(booking_Id).get();
+	public Booking readBooking(Long bookingId) {
+		return repo.findById(bookingId).get();
 	}
 
 	public List<Booking> readAllBookings() {
@@ -31,14 +31,14 @@ public class BookingService {
 	}
 
 	// Update
-	public Booking updateBooking(Booking updateBooking, Long booking_Id) {
+	public Booking updateBooking(Booking updateBooking, Long bookingId) {
 
-		Optional<Booking> currentBooking = this.repo.findById(booking_Id);
+		Optional<Booking> currentBooking = this.repo.findById(bookingId);
 
 		if (currentBooking.get() instanceof Booking) {
 			Booking oldBooking = currentBooking.get();
 
-			oldBooking.setbooking_Id(updateBooking.getbooking_Id());
+			oldBooking.setbookingId(updateBooking.getbookingId());
 			oldBooking.setbookingName(updateBooking.getbookingName());
 			oldBooking.setbookingScreen(updateBooking.getbookingScreen());
 			oldBooking.setbookingSeatNumber(updateBooking.getbookingSeatNumber());
@@ -53,15 +53,15 @@ public class BookingService {
 	}
 
 	// Delete
-	public boolean deleteByBookingID(Long booking_Id) {
-		Optional<Booking> currentFilm = this.repo.findById(booking_Id);
+	public boolean deleteByBookingID(Long bookingId) {
+		Optional<Booking> currentFilm = this.repo.findById(bookingId);
 
 		// Ternary Statement we need to ensure we use it within a variable
 
 		boolean isPresent = (currentFilm.isPresent()) ? true : false;
 
 		if (isPresent) {
-			this.repo.deleteById(booking_Id);
+			this.repo.deleteById(bookingId);
 			return true;
 		} else {
 //			throw new Exception();
