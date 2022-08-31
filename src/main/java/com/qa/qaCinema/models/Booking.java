@@ -12,6 +12,33 @@ import javax.persistence.Id;
 @Entity
 public class Booking {
 
+	public Booking() {
+		super();
+	}
+
+	public Booking(Long film_Id, int bookingSeatNumber, String bookingName, String bookingScreen, String bookingTime,
+			String bookingPrice) {
+		super();
+		this.film_Id = film_Id;
+		this.bookingSeatNumber = bookingSeatNumber;
+		this.bookingName = bookingName;
+		this.bookingScreen = bookingScreen;
+		this.bookingTime = bookingTime;
+		this.bookingPrice = bookingPrice;
+	}
+
+	public Booking(Long booking_Id, Long film_Id, int bookingSeatNumber, String bookingName, String bookingScreen,
+			String bookingTime, String bookingPrice) {
+		super();
+		this.booking_Id = booking_Id;
+		this.film_Id = film_Id;
+		this.bookingSeatNumber = bookingSeatNumber;
+		this.bookingName = bookingName;
+		this.bookingScreen = bookingScreen;
+		this.bookingTime = bookingTime;
+		this.bookingPrice = bookingPrice;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long booking_Id;
@@ -101,8 +128,7 @@ public class Booking {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(bookingName, bookingPrice, bookingScreen, bookingSeatNumber, bookingTime, booking_Id,
-				film_Id);
+		return Objects.hash(bookingName, bookingPrice, bookingScreen, bookingSeatNumber, bookingTime, film_Id);
 	}
 
 	@Override
@@ -116,8 +142,7 @@ public class Booking {
 		Booking other = (Booking) obj;
 		return Objects.equals(bookingName, other.bookingName) && Objects.equals(bookingPrice, other.bookingPrice)
 				&& Objects.equals(bookingScreen, other.bookingScreen) && bookingSeatNumber == other.bookingSeatNumber
-				&& Objects.equals(bookingTime, other.bookingTime) && Objects.equals(booking_Id, other.booking_Id)
-				&& Objects.equals(film_Id, other.film_Id);
+				&& Objects.equals(bookingTime, other.bookingTime) && Objects.equals(film_Id, other.film_Id);
 	}
 	
 	
