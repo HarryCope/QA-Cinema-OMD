@@ -27,9 +27,9 @@ public class FilmsTest {
 
 	@Test
 	public void constructors_Film() {
-		Film pokemonOne = new Film();
+		Film filmOne = new Film();
 
-		assertTrue(pokemonOne instanceof Film == true);
+		assertTrue(filmOne instanceof Film == true);
 
 		Film filmTwo = new Film("Shrek 2", "7", "26th January", "10", "Big Ogre man", null, null, null);
 
