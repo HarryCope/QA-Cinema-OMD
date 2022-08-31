@@ -1,6 +1,13 @@
-footer {
-    text-align: center;
-    padding: 3px;
-    background-color: DarkSalmon;
+  .navbar-custom {
+    background-color: rgb(83, 83, 83);
+}
+
+.footer-custom {
+    background-color: rgb(83, 83, 83);
     color: white;
+}
+
+body {
+    min-height: 75rem;
+    padding-top: 4.5rem;
   }

@@ -17,140 +17,109 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </head>
     <body>
-        <nav>
-            <div class="nav-wrapper">
-              <a href="#" class="brand-logo">QA Cinema</a>
-              <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">JavaScript</a></li>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#"><img src="/logos/QA-Cinema-Logo.png" style="height:60px; width:100px;"></a>
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Current Releases</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Bookings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Discussion Board</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+        
+        <h1>This is some text</h1>
+        <h1>And some more...</h1>
+        <h1>And some more...</h1>
+        <h1>And some more...</h1>
+        <h1>And some more...</h1>
+        <h1>And some more...</h1>
+        <h1>And some more...</h1>
+        <h1>And some more...</h1>
+        <h1>And some more...</h1>
+        <h1>And some more...</h1>
+        <h1>And some more...</h1>
+        <h1>And some more...</h1>
+        <h1>And some more...</h1>
+
+        <div class="mt-auto">
+          <footer class = "footer-custom">
+            <div class="row">
+              <div class="col-6 col-md-3 mb-3">
+                <h5>Opening Times</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Monday - Friday: 9am - 10pm</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Saturday: 9am - 11pm</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sunday: Closed</a></li>
+                </ul>
+              </div>
+        
+              <div class="col-6 col-md-2 mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+              </div>
+        
+              <div class="col-6 col-md-2 mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+              </div>
+        
+              <div class="col-md-3 offset-md-1 mb-3">
+                <form>
+                  <h5>Subscribe to our newsletter</h5>
+                  <p>Hear about the newest films and events before anyone else!</p>
+                  <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                    <button class="btn btn-primary" type="button">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+        
+            <div class="d-flex flex-column flex-sm-row justify-content-between border-top">
+              <p>&copy; 2022 Company, Inc. All rights reserved.</p>
+              <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
               </ul>
             </div>
-        </nav>
-    
-        <footer class="page-footer font-small indigo fixed-bottom">
-
-          <!-- Footer Links -->
-          <div class="container text-center text-md-left">
-        
-            <!-- Grid row -->
-            <div class="row">
-        
-              <!-- Grid column -->
-              <div class="col-md-3 mx-auto">
-        
-                <!-- Links -->
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-        
-                <ul class="list-unstyled">
-                  <li>
-                    <a href="#!">Very long link 1</a>
-                  </li>
-                  <li>
-                    <a href="#!">Very long link 2</a>
-                  </li>
-                  <li>
-                    <a href="#!">Very long link 3</a>
-                  </li>
-                  <li>
-                    <a href="#!">Very long link 4</a>
-                  </li>
-                </ul>
-        
-              </div>
-              <!-- Grid column -->
-        
-              <hr class="clearfix w-100 d-md-none">
-        
-              <!-- Grid column -->
-              <div class="col-md-3 mx-auto">
-        
-                <!-- Links -->
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-        
-                <ul class="list-unstyled">
-                  <li>
-                    <a href="#!">Link 1</a>
-                  </li>
-                  <li>
-                    <a href="#!">Link 2</a>
-                  </li>
-                  <li>
-                    <a href="#!">Link 3</a>
-                  </li>
-                  <li>
-                    <a href="#!">Link 4</a>
-                  </li>
-                </ul>
-        
-              </div>
-              <!-- Grid column -->
-        
-              <hr class="clearfix w-100 d-md-none">
-        
-              <!-- Grid column -->
-              <div class="col-md-3 mx-auto">
-        
-                <!-- Links -->
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-        
-                <ul class="list-unstyled">
-                  <li>
-                    <a href="#!">Link 1</a>
-                  </li>
-                  <li>
-                    <a href="#!">Link 2</a>
-                  </li>
-                  <li>
-                    <a href="#!">Link 3</a>
-                  </li>
-                  <li>
-                    <a href="#!">Link 4</a>
-                  </li>
-                </ul>
-        
-              </div>
-              <!-- Grid column -->
-        
-              <hr class="clearfix w-100 d-md-none">
-        
-              <!-- Grid column -->
-              <div class="col-md-3 mx-auto">
-        
-                <!-- Links -->
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-        
-                <ul class="list-unstyled">
-                  <li>
-                    <a href="#!">Link 1</a>
-                  </li>
-                  <li>
-                    <a href="#!">Link 2</a>
-                  </li>
-                  <li>
-                    <a href="#!">Link 3</a>
-                  </li>
-                  <li>
-                    <a href="#!">Link 4</a>
-                  </li>
-                </ul>
-        
-              </div>
-              <!-- Grid column -->
-        
-            </div>
-            <!-- Grid row -->
-        
-          </div>
-          <!-- Footer Links -->
-        
-          <!-- Copyright -->
-          <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="/"> MDBootstrap.com</a>
-          </div>
-          <!-- Copyright -->
-        
-        </footer>
+          </footer>
+        </div>
 
         
     </body>
