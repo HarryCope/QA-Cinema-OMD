@@ -12,7 +12,7 @@ pipeline {
                 ssh -i ~/.ssh/id_rsa jenkins@13.40.31.150 << EOF
                 git clone https://github.com/HarryCope/QA-Cinema-OMD.git
                 cd QA-Cinema-OMD
-                git checkout development
+                git checkout dev
                 git pull
                 mvn clean install
                 mkdir -p /home/jenkins/project-wars
