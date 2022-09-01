@@ -11,6 +11,7 @@
 body {
   background-color: rgb(147, 158, 154);
   min-width: 500px;
+  padding-top: 550px;
 }
 
 
@@ -25,5 +26,16 @@ body {
   height:100vh; 
   width:auto; 
   object-fit:cover; 
+}
+
+.carousel{
+  position: absolute;
+  margin-bottom: 20px;
+  line-height:1;
+  top:0;
+  left:0;
+  min-width:100%;
+  min-height: 500px;
+  max-height: 600px;
 }
 
