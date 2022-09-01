@@ -13,3 +13,10 @@ body {
 }
 
 
+.carousel-item {
+  height: 550px;
+  overflow: hidden;
+  width: 100%;
+  }
+
+
