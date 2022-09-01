@@ -16,7 +16,7 @@ pipeline {
                 git pull
                 mvn clean install
                 mkdir -p /home/jenkins/project-wars
-                mv ./target/*.war /home/jenkins/project-wars/project-${BUILD_NUMBER}.war
+                mv ./target/*.jar /home/jenkins/project-wars/project-${BUILD_NUMBER}.jar
                 '''
             }
         }
@@ -30,7 +30,7 @@ Description=My SpringBoot App
 [Service]
 User=jenkins
 Type=simple
-ExecStart=/usr/bin/java -jar /home/jenkins/project-wars/project-'$build_num'.war
+ExecStart=/usr/bin/java -jar /home/jenkins/project-wars/project-'$build_num'.jar
 [Install]
 WantedBy=multi-user.target' > /home/jenkins/TheApp.service
                 sudo mv /home/jenkins/TheApp.service /etc/systemd/system/TheApp.service
