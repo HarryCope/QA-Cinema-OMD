@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                ssh -i ~/.ssh/id_rsa jenkins@13.40.31.150 << EOF
+                ssh -i ~/.ssh/id_rsa jenkins@18.130.150.90 << EOF
                 git clone https://github.com/HarryCope/QA-Cinema-OMD.git
                 cd QA-Cinema-OMD
                 git checkout dev
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh '''
                 build_num=${BUILD_NUMBER}
-                ssh -i ~/.ssh/id_rsa jenkins@13.40.31.150 << EOF
+                ssh -i ~/.ssh/id_rsa jenkins@18.130.150.90 << EOF
                 echo '[Unit]
 Description=My SpringBoot App
 [Service]
