@@ -1,5 +1,5 @@
-const newPokemonName = document.getElementById('newDiscussionName');
-const newPokemonType = document.getElementById('newDiscussionPost');
+const newDiscussionName = document.getElementById('newDiscussionName');
+const newDiscussionPost = document.getElementById('newDiscussionPost');
 
 
 
