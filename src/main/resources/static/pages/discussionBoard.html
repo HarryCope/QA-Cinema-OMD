@@ -13,7 +13,7 @@
   <body>
    
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <a class="navbar-brand" href="#"><img src="/logos/QA-Cinema-Logo.png" style="height:60px; width:100px;"></a>
+          <a class="navbar-brand" href="#"><img src="QA-Cinema-Logo.png" style="height:60px; width:100px;"></a>
           <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -48,7 +48,7 @@
           <main>
             <aside>
               <h2>Welcome to QA Cinema Discussion Board</h2>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo soluta impedit, saepe rerum atque totam iure. Vero velit, eos beatae temporibus, ullam dolorem dicta laborum suscipit ut facilis quae minus!</p>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam facilis quisquam, magni qui temporibus pariatur sequi veritatis perferendis esse nemo in distinctio itaque a cupiditate officia ipsum eos iste vero?</p>
               <hr>
             </aside>
             <div id="content">
@@ -56,32 +56,43 @@
                 <div id="user-img">
                   <i class="fa fa-user" style="font-size: 40px;"></i>
                 </div>
-                <div id="placeholder">Your thoughts on our films</div>
+                <div>
+                  <button type="button" class="add-button" data-bs-toggle="modal"
+                      data-bs-target="#addDiscussionModal">Create Post</button>
+          
+                  <div class="modal fade" id="addDiscussionModal" tabindex="-1" aria-labelledby="discussionModalLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="discussionModalLabel" style="color: black;">Create Post</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                      aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                  <div class="container-fluid">
+                                      <form>
+                                          <label for="newDiscussionName" class="form-label mt-2" style="color: black;">Your Name:</label>
+                                          <input type="text" class="form-control" id="newDiscussionName">
+                                          <label for="newDiscussionPost" class="form-label mt-2" style="color: black;">Post:</label>
+                                          <input type="text" class="form-control" id="newDiscussionPost">
+                                      </form>
+                                  </div>
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-outline-secondary"
+                                      data-bs-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary" id="create--button" onclick="createPost()"
+                                      data-bs-dismiss="modal">Add</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+          
               </div>
-              <article>
-                <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem cupiditate officia repellat fugiat, recusandae suscipit natus modi dolores corrupti labore commodi illo impedit in enim id facere molestiae placeat eos.</p>
-              </article>
-              <article>
-                <h2>Dolor?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, labore cumque? Temporibus ex nostrum officia. Vel officiis provident aliquid rem accusamus! Iure eligendi dicta dolorem repellendus deleniti quidem laboriosam, blanditiis alias labore unde porro consequatur incidunt, pariatur cumque similique illum? Nobis, quos. Esse labore omnis vitae tempore. Doloribus unde, accusantium itaque laboriosam sapiente numquam laborum quia quam fugit officia delectus voluptatem quos, eos quas in! Error suscipit officiis labore adipisci sit in dicta expedita ducimus debitis cumque quas dolorum, accusantium, facilis cupiditate omnis. Minus eos ea modi sint in nostrum saepe harum accusantium sunt animi, veritatis beatae ducimus excepturi omnis?</p>
-              </article>
-              <article>
-                <h2>Sit amet con</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid et pariatur omnis expedita, odio laborum cupiditate sint repellendus possimus praesentium sit, adipisci quisquam. Iusto vero adipisci possimus, quo, molestias maxime sequi repudiandae porro, hic architecto ut neque ratione. Ut iusto nemo aperiam vitae. Quidem deserunt aspernatur reiciendis ratione labore vero!</p>
-              </article>
-              <article>
-                <h2>Orav eta olsi nemo CodePen</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam at ex recusandae asperiores quos cumque explicabo doloribus dolore dolores fuga. Velit blanditiis aperiam harum. Fugit recusandae sed magni nobis assumenda iusto, pariatur molestias amet sint repellendus sit ipsum ipsam eaque perferendis praesentium beatae ullam dignissimos fugiat doloremque quibusdam quos! Ipsum, laboriosam numquam. Ratione consequatur quas dolore optio necessitatibus! Reprehenderit dolore doloremque dolorum reiciendis nisi tempora id voluptas exercitationem optio praesentium consequuntur, distinctio suscipit a sit repellat dolor maxime corporis accusantium quod facere nobis delectus! Delectus suscipit libero dolor iste numquam aliquid, natus commodi incidunt, amet non perferendis impedit eligendi ipsam!</p>
-              </article>
-              <article>
-                <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ipsa labore quia pariatur eius praesentium reprehenderit ratione, dolore explicabo voluptates, quasi eum beatae soluta rerum fugit sunt in ducimus facilis, cupiditate amet quae et temporibus! Nihil minima esse soluta dignissimos tempora praesentium veniam optio eaque autem, voluptas repellendus maiores inventore suscipit porro quos quis voluptates a eos eligendi necessitatibus placeat, deserunt id consequuntur nostrum? Commodi veritatis, ex eius id exercitationem suscipit? Temporibus nesciunt dicta voluptas illo eos fugiat dolore veniam. Rerum unde libero est! Provident quis eius unde quam, quos, repellendus explicabo labore praesentium, deserunt corporis consectetur dignissimos iste ratione! Perferendis eos neque officiis et facilis harum praesentium ea voluptatum debitis. Harum beatae eveniet hic a laboriosam blanditiis provident ad perspiciatis quaerat facere. Provident molestiae dolore doloribus velit veniam earum dolores beatae veritatis voluptatibus! Deserunt veniam atque impedit vero ullam reprehenderit nihil corrupti delectus ea! Iusto cupiditate distinctio consequatur sequi?</p>
-              </article>
-              <article>
-                <h2>Dul!</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, dicta!</p>
-              </article>
+              
+              </div>
+              <div id="myPost"></div>
             </div>
           </main>
 
@@ -149,4 +160,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
   </body>
+  <script src="./discussionBoard.js"></script>
 </html>

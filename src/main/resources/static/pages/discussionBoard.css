@@ -15,6 +15,13 @@ a {
     --bg: #1b1d21;
     --s-bg: #1e1f26;
   }
+
+  .add-button {
+        color:white;
+        background:rgb(42, 42, 42);
+        width:fit-content;
+        align-self: center;
+  }
   
   body, html {
     margin: 0;
@@ -95,7 +102,7 @@ a {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    height: 25%;
+    height: 100%;
     max-width: 14%;
     min-width: 20%;
     margin-left: 2%;
@@ -127,6 +134,7 @@ a {
     padding: 1%;
     flex-direction: row;
     border-radius: 6px;
+    align-self: center;
   }
   
   #placeholder {
