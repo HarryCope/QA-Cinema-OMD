@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    options {
-        skipDefaultCheckout(true)
-    }
     stages {
         stage('Test') {
             steps {
@@ -11,8 +8,6 @@ pipeline {
         }
         stage('Build') {
             steps {
-                cleanWs()
-                checkout scm
                 sh '''
                 ssh -i ~/.ssh/id_rsa jenkins@18.130.150.90 << EOF
                 git clone https://github.com/HarryCope/QA-Cinema-OMD.git
