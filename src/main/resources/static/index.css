@@ -11,7 +11,7 @@ body {
   /*background-color: rgb(89, 92, 91);*/
   min-width: 500px;
   padding-top: 550px;
-  background-image: linear-gradient(to right, #878787, #767676, #686868, #494949, #3b3b3b, #272727);
+  background-image: linear-gradient(rgba(0, 18, 50, 0.84), rgba(0, 0, 0, 0.95));
 }
 
 .main-footer {

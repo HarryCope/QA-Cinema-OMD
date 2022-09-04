@@ -8,7 +8,7 @@
   }
   
   body {
-    background-image: linear-gradient(to right, #878787, #747474, #686868, #494949, #3b3b3b, #272727) !important;
+    background-image: linear-gradient(rgba(0, 18, 50, 0.84), rgba(0, 0, 0, 0.95));
   }
   
   .main-footer {
@@ -21,3 +21,14 @@
     width:auto; 
     object-fit:cover; 
   }
+
+  .accordion-button {
+    color: #ffffff;
+    background-color: #515151;
+    font-size: large;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #ffffff;
+  background-color: #767676;
+}
