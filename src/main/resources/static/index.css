@@ -282,3 +282,23 @@ p.text span {
       font-size: 18px
   }
 }
+
+.modal-body {
+  background-image: linear-gradient(rgba(0, 18, 50, 0.84), rgba(0, 0, 0, 0.95));
+  color: white;
+}
+
+.modal-header {
+  background-image: linear-gradient(rgba(0, 18, 50, 0.84), rgba(0, 0, 0, 0.95));
+  color: white;
+}
+
+.modal-footer {
+  background-image: linear-gradient(rgba(0, 18, 50, 0.84), rgba(0, 0, 0, 0.95));
+  color: white;
+}
+
+.modal-content {
+  background-image: linear-gradient(rgba(0, 18, 50, 0.84), rgba(0, 0, 0, 0.95));
+  color: white;
+}
