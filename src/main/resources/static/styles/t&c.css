@@ -1,0 +1,34 @@
+.navbar-custom {
+    background-color: rgb(83, 83, 83);
+  }
+  
+  .footer-custom {
+    background-color: rgb(63, 62, 62);
+    color: white;
+  }
+  
+  body {
+    background-image: linear-gradient(rgba(0, 18, 50, 0.84), rgba(0, 0, 0, 0.95));
+  }
+  
+  .main-footer {
+    width: 100%;
+  }
+  
+  
+  .d-block.w-100 { 
+    height:100vh; 
+    width:auto; 
+    object-fit:cover; 
+  }
+
+  .accordion-button {
+    color: #ffffff;
+    background-color: #515151;
+    font-size: large;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #ffffff;
+  background-color: #767676;
+}

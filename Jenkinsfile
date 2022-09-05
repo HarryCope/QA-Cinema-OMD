@@ -12,11 +12,11 @@ pipeline {
                 ssh -i ~/.ssh/id_rsa jenkins@18.130.150.90 << EOF
                 git clone https://github.com/HarryCope/QA-Cinema-OMD.git
                 cd QA-Cinema-OMD
-                git checkout dev
+                git checkout origin/dev
                 git pull
                 mvn clean install
                 mkdir -p /home/jenkins/project-wars
-                mv ./target/*.war /home/jenkins/project-wars/project-${BUILD_NUMBER}.war
+                mv ./target/*.jar /home/jenkins/project-wars/project-${BUILD_NUMBER}.jar
                 '''
             }
         }
@@ -30,12 +30,12 @@ Description=My SpringBoot App
 [Service]
 User=jenkins
 Type=simple
-ExecStart=/usr/bin/java -jar /home/jenkins/project-wars/project-'$build_num'.war
+ExecStart=/usr/bin/java -jar /home/jenkins/project-wars/project-'$build_num'.jar
 [Install]
 WantedBy=multi-user.target' > /home/jenkins/TheApp.service
                 sudo mv /home/jenkins/TheApp.service /etc/systemd/system/TheApp.service
                 sudo systemctl daemon-reload
-                sudo systemctl restart MyApp
+                sudo systemctl restart TheApp
                 '''
             }
         }

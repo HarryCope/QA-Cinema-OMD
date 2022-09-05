@@ -1,0 +1,180 @@
+a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --bg: #1b1d21;
+    --s-bg: #1e1f26;
+  }
+
+  .add-button {
+        color:white;
+        background:rgb(42, 42, 42);
+        width:fit-content;
+        align-self: center;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+  }
+  
+  header {
+    background:
+      linear-gradient(to bottom, transparent, var(--bg) 95%),
+      url('https://images.unsplash.com/photo-1516259762381-22954d7d3ad2');
+    height: 25%;
+    padding: 1%;
+    display: flex;
+    gap: 1%;
+    justify-content: space-between;
+  }
+  
+  header img {
+    filter: invert(1);
+    padding: .5rem;
+    display: block;
+    margin-block: auto;
+  }
+  
+  header #info {
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    gap: 1rem;
+  }
+  
+  header nav li {
+    background-color: var(--s-bg);
+    padding: .75%;
+    border-radius: 6px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  
+  .fa {
+    font-size: 20px;
+  }
+  
+  ul .fa {
+    margin-right: 5%;
+  }
+  
+  #cdpn-logo {
+    width: 15px;
+    height: 15px;
+    filter: invert(1);
+    margin-right: 5%;
+  }
+  
+  #links {
+    align-self: center;
+  }
+  
+  #link-container {
+    background-color: var(--s-bg);
+  }
+  
+  main {
+    background-color: var(--bg);
+    height: 100%;
+    display: flex;
+    gap: 1%;
+  }
+  
+  aside {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 100%;
+    max-width: 14%;
+    min-width: 20%;
+    margin-left: 2%;
+    box-shadow: 0 0 5px black;
+    padding-inline: 1%;
+    text-align: center;
+    border-radius: 6px;
+  }
+  
+  hr {
+    background: currentcolor;
+  }
+  
+  #content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  #post {
+    display: flex;
+    gap: 2%;
+    background: var(--s-bg);
+    max-height: 100px;
+    width: 95%;
+    box-shadow: 0 0 5px black;
+    padding: 1%;
+    flex-direction: row;
+    border-radius: 6px;
+    align-self: center;
+  }
+  
+  #placeholder {
+    align-self: center;
+    color: gray;
+  }
+  
+  #user-img {
+    padding: 1%;
+  }
+  
+  article {
+    background: var(--s-bg);
+    max-width: 95%;
+    box-shadow: 0 0 5px black;
+    padding: 1%;
+    border-radius: 6px;
+    border: 3px solid gray;
+  }
+  
+  article p {
+    line-height: 150%;
+  }
+  
+  aside p {
+    line-height: 150%;
+  }
+
+  .navbar-custom {
+    background-color: rgb(83, 83, 83);
+}
+
+.footer-custom {
+    background-color: rgb(83, 83, 83);
+    color: white;
+}
+
+
+body {
+  background-color: rgb(147, 158, 154);
+  min-width: 500px;
+  padding-top: 150px;
+}
