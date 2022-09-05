@@ -55,9 +55,10 @@ body {
   }
 
   .footer-custom {
-    background-color: rgb(83, 83, 83);
+    background-color: rgb(63, 62, 62);
     color: white;
-}
+  }
+  
 .center {
   display: block;
   margin-left: auto;
