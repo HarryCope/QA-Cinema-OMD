@@ -2,6 +2,8 @@ package com.qa.qaCinema.serviceTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
@@ -39,18 +41,35 @@ public class BookingServiceUnitTest {
 				
 	}
 	
-	@Test
-	public void updateBooking_ValidId_UpdateBooking() {
-		
-		Optional<Booking> mockOutput = Optional.ofNullable(new Booking(1L, 1L, 5, "Harry", "3", "18:00", "£10.00"));
-		Booking expectedOutput = new Booking( 1L, 5, "Harry", "3", "18:00", "£10.00");
-		
-		Mockito.when(this.repo.findById(1L)).thenReturn(mockOutput);
-		Mockito.when(this.repo.save(expectedOutput)).thenReturn(expectedOutput);
+//	@Test
+//	public void updateBooking_ValidId_UpdateBooking() {
+//		
+//		Optional<Booking> mockOutput = Optional.ofNullable(new Booking(1L, 1L, 5, "Harry", "3", "18:00", "£10.00"));
+//		Booking expectedOutput = new Booking(1L, 5, "Harry", "3", "18:00", "£10.00");
+//		
+//		Mockito.when(this.repo.findById(1L)).thenReturn(mockOutput);
+//		Mockito.when(this.repo.save(expectedOutput)).thenReturn(expectedOutput);
+//
+//		assertEquals(expectedOutput, this.service.updateBooking(expectedOutput, 1L));
+//		
+//		Mockito.verify(this.repo, Mockito.times(1)).save(expectedOutput);
+//		Mockito.verify(this.repo, Mockito.times(1)).findById(1L);		
+//	}
+	
+	 @Test
+	    public void readBooking_ValidBooking_ReadBooking() {
+	        List<Booking> bookList = new ArrayList<>();
+	        bookList.add(new Booking(1L, 1L, 5, "Harry", "3", "18:00", "£10.00"));
 
-		assertEquals(expectedOutput, this.service.updateBooking(expectedOutput, 1L));
-		
-		Mockito.verify(this.repo, Mockito.times(1)).save(expectedOutput);
-		Mockito.verify(this.repo, Mockito.times(1)).findById(1L);		
-	}
+	        Mockito.when(this.service.readAllBookings()).thenReturn(bookList);
+	        assertEquals(bookList, this.service.readAllBookings());
+	        Mockito.verify(this.repo, Mockito.times(1)).findAll();
+	    }
+	@Test
+	    public void deleteBooking_Booking() {
+		Booking validBooking = new Booking();
+	        Mockito.when(this.repo.findById(validBooking.getBooking_Id())).thenReturn(Optional.of(validBooking));
+	        this.service.deleteByBookingID(validBooking.getBooking_Id());
+	        Mockito.verify(this.repo, Mockito.times(1)).deleteById(validBooking.getBooking_Id());
+	    }
 }
