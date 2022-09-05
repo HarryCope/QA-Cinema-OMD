@@ -1,0 +1,43 @@
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: black;
+}
+
+h1 {
+  margin-bottom: 40px;
+  color: white;
+}
+
+label {
+  color: white;
+}
+
+.btn-send {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  width: 80%;
+  height: 80%;
+  margin-left: 40px;
+  margin-top: 30px;
+  text-align: center;
+  }
+
+.help-block.with-errors {
+  color: #ff5050;
+  margin-top: 5px;
+
+}
+
+.card{
+margin-left: 10px;
+margin-right: 10px;
+background-color: black;
+}
+
+
+  
+.footer-custom {
+  background-color: rgb(63, 62, 62);
+  color: white;
+}
