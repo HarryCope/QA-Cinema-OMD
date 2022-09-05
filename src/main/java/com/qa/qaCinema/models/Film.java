@@ -73,6 +73,12 @@ public class Film {
 		@Column
 		private ArrayList<String> filmGenres;
 		
+		//@Column
+		//private String filmRunningTime;
+		
+		//@Column
+		//private String filmShowingTimes;
+		
 		
 		//Create the getters and setters
 

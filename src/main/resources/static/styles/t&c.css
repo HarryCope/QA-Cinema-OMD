@@ -24,11 +24,23 @@
 
   .accordion-button {
     color: #ffffff;
-    background-color: #515151;
+    background-color: #363636;
     font-size: large;
 }
 
 .accordion-button:not(.collapsed) {
   color: #ffffff;
   background-color: #767676;
+}
+
+.show {
+  background-color: rgb(134, 134, 134);
+}
+
+.collapsing {
+  background-color: rgb(134, 134, 134);
+}
+
+.accordion-body {
+  color: white;
 }

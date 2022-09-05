@@ -1,6 +1,4 @@
 
-
-
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 /* @import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap'); */
 
@@ -51,11 +49,8 @@
 
 .container {
     /*  it simply enables a 3D-space for children elements. */
-    perspective: 1000px;
-    -webkit-perspective: 1000px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
