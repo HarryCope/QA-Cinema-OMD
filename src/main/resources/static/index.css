@@ -3,15 +3,15 @@
 }
 
 .footer-custom {
-    background-color: rgb(83, 83, 83);
+    background-color: rgb(63, 62, 62);
     color: white;
 }
 
-
 body {
-  background-color: rgb(147, 158, 154);
+  /*background-color: rgb(89, 92, 91);*/
   min-width: 500px;
   padding-top: 550px;
+  background-image: linear-gradient(rgba(0, 18, 50, 0.84), rgba(0, 0, 0, 0.95));
 }
 
 .main-footer {
