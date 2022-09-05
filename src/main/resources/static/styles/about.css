@@ -7,11 +7,9 @@ body {
   width: 100%;
 }
 
-
-.d-block.w-100 { 
-  height:100vh; 
-  width:auto; 
-  object-fit:cover; 
+h5 {
+  margin-block-start: 0%;
+  margin-block-end: 0%;
 }
 
 
