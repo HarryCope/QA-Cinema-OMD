@@ -1,0 +1,16 @@
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  align-content: center;
+  margin:auto;
+  text-align: center;
+ 
+ 
+}
+
+.footer-custom {
+  background-color: rgb(63, 62, 62);
+  color: white;
+}
