@@ -87,24 +87,24 @@ function bookingFunction1() {
 }
 
 const createBooking1 = () => {
-        let newBookingSeatCreate = newBookingSeat.value;
+        //let newBookingSeatCreate = newBookingSeat.value;
         let newBookingNameCreate = newBookingName.value;
-        let newBookingTimeCreate = newBookingTime.textContent;
+        let newBookingTimeCreate = newBookingTime;
         let newBookingPriceCreate = newBookingPrice.textContent;
       
-        let bookingData = {
+        let bookingData1 = {
             "film_id": "1",
-            "bookingSeatNumber": newBookingSeatCreate,
+            "bookingSeatNumber": JSON.stringify(seatsIndex),
             "bookingName": newBookingNameCreate,
             "bookingScreen":"1",
             "bookingTime": newBookingTimeCreate,
             "bookingPrice": newBookingPriceCreate
         }
-        console.log(bookingData)
+        console.log(bookingData1)
       
         fetch(`${bookingUrl}/createBooking`, {
             method: "POST",
-            body: JSON.stringify(bookingData),
+            body: JSON.stringify(bookingData1),
             headers: {
                 "Content-Type": "application/json"
             }
@@ -112,28 +112,29 @@ const createBooking1 = () => {
             .then(response => response.json())
             .then(model => {
                 //console.log(model);
-                readBooking();
+                readBooking1();
             })
             .catch(err => console.error(`error ${err}`));
+            console.log(seatsIndex)
       };
 
-      const readBooking = () => {
+      const readBooking1 = () => {
 	
         fetch(`${bookingUrl}/getBooking`)
                 .then(function (response) {
                     return response.json();
                 })
-                .then(function (bookingData) {
-                    appendData(bookingData);
+                .then(function (bookingData1) {
+                    appendData(bookingData1);
                 })
                 .catch(function (err) {
                     console.log('error: ' + err);
                 });
-            function appendData(bookingData) {
+            function appendData(bookingData1) {
                 var mainContainer = document.getElementById("bookingDataList");
-                for (var i = 0; i < bookingData.length; i++) {
+                for (var i = 0; i < bookingData1.length; i++) {
                     var div = document.createElement("div");
-                    div.innerHTML = 'Film id: ' + bookingData[i].film_id + 'Seat number: ' + bookingData[i].bookingSeatNumber + 'Name: ' + bookingData[i].bookingName + 'Screen number: ' + bookingData[i].bookingScreen + 'Booking time: ' + bookingData[i].bookingTime + 'Price: ' + bookingData[i].bookingPrice;
+                    div.innerHTML = 'Film id: ' + bookingData1[i].film_id + 'Seat number: ' + bookingData1[i].bookingSeatNumber + 'Name: ' + bookingData1[i].bookingName + 'Screen number: ' + bookingData1[i].bookingScreen + 'Booking time: ' + bookingData1[i].bookingTime + 'Price: ' + bookingData1[i].bookingPrice;
                     mainContainer.appendChild(div);
                 }
               }

@@ -81,13 +81,6 @@ const count3 = document.getElementById("count3");
 const total3 = document.getElementById("total3");
 const movieSelect3 = document.getElementById("movie3");
 
-const newBookingFilmId = document
-const newBookingSeat = document
-const newBookingName = document
-const newBookingScreen = document
-const newBookingTime = document
-const newBookingPrice = document
-
 populateUI();
 
 let ticketPrice2 = +movieSelect2.value;
