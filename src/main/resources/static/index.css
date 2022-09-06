@@ -302,7 +302,3 @@ p.text span {
   background-image: linear-gradient(rgba(0, 18, 50, 0.84), rgba(0, 0, 0, 0.95));
   color: white;
 }
-
-.input-group-prepend {
- background-color: #01163e;
-}
