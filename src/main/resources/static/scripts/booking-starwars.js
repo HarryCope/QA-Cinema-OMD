@@ -93,7 +93,7 @@ const createBooking1 = () => {
         let newBookingPriceCreate = newBookingPrice.textContent;
       
         let bookingData1 = {
-            "film_id": "1",
+            "film_Id": "1",
             "bookingSeatNumber": JSON.stringify(seatsIndex),
             "bookingName": newBookingNameCreate,
             "bookingScreen":"1",
