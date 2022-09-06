@@ -1,4 +1,4 @@
-const bookUrl = "http://localhost:8081/book";
+
 const seats = document.querySelectorAll(".row .seat:not(.occupied)");
 const seatContainer = document.querySelector(".row-container");
 
@@ -154,57 +154,3 @@ seatContainer.addEventListener("click", function(e) {
 // Initial count and total rendering
 updateSelectedCount();
 
-const readBooking = () => {
-	
-	fetch(`${bookUrl}/getBooking`)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (bookingData) {
-                appendData(bookingData);
-            })
-            .catch(function (err) {
-                console.log('error: ' + err);
-            });
-        function appendData(bookingData) {
-            var mainContainer = document.getElementById("bookingDataList");
-            for (var i = 0; i < bookingData.length; i++) {
-                var div = document.createElement("div");
-                div.innerHTML = 'Film id: ' + bookingData[i].film_id + 'Seat number: ' + bookingData[i].bookingSeatNumber + 'Name: ' + bookingData[i].bookingName + 'Screen number: ' + bookingData[i].bookingScreen + 'Booking time: ' + bookingData[i].bookingTime + 'Price: ' + bookingData[i].bookingPrice;
-                mainContainer.appendChild(div);
-            }
-          }
-};
-
-const createBooking = () => {
-  const newBookingFilmIdCreate = newBookingFilmId.value;
-  const newBookingSeatCreate = newBookingSeat.value;
-  const newBookingNameCreate = newBookingName.value;
-  const newBookingScreenCreate = newBookingScreen.value;
-  const newBookingTimeCreate = newBookingTime.value;
-  const newBookingPriceCreate = newBookingPrice.value;
-
-  let bookingData = {
-      "film_id": newPokemonNameCreate,
-      "bookingSeatNumber": newPokemonTypeCreate,
-      "bookingName": newPokemonLevelCreate,
-      "bookingScreen": newPokemonHeldItemCreate,
-      "bookingTime": newPokemonHeldItemCreate,
-      "bookingPrice": newPokemonHeldItemCreate
-  }
-  console.log(bookingData)
-
-  fetch(`${bookUrl}/createBooking`, {
-      method: "POST",
-      body: JSON.stringify(bookingData),
-      headers: {
-          "Content-Type": "application/json"
-      }
-  })
-      .then(response => response.json())
-      .then(model => {
-          console.log(model);
-          readBooking();
-      })
-      .catch(err => console.error(`error ${err}`));
-};
