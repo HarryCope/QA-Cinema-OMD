@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,8 +8,9 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link href="/styles/discussionBoard.css" rel="stylesheet">
-    <title>QA Cinema - Discussion Board</title>
+
+    <link href="/styles/t&c.css" rel="stylesheet">
+    <title>QA Cinema - About Us</title>
   </head>
   <body>
    
@@ -53,90 +55,41 @@
       </div>
     </nav>
 
-       
-          <main>
-            <aside>
-              <h2>Welcome to QA Cinema Discussion Board</h2>
-              <p>Let us know what you think of the films you have seen or about your experience at one of our venues. Or if you feel so inclined how much you love our glorious leader. Any posts containing criticism of any kind will be removed and you will me added to our emailing list until the end of time so dont say we didn't warn you.</p>
-              <hr>
-            </aside>
-            <div id="content">
-              <div id="post">
-                <div id="user-img">
-                  <i class="fa fa-user" style="font-size: 40px;"></i>
-                </div>
-                <div>
-                  <button type="button" class="add-button" data-bs-toggle="modal"
-                      data-bs-target="#addDiscussionModal">Create Post</button>
-          
-                  <div class="modal fade" id="addDiscussionModal" tabindex="-1" aria-labelledby="discussionModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h5 class="modal-title" id="discussionModalLabel">Create Post</h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                      aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                  <div class="container-fluid">
-                                      <form>
-                                          <label for="newDiscussionName" class="form-label mt-2">Your Name:</label>
-                                          <input type="text" class="form-control" id="newDiscussionName">
-                                          <label for="newDiscussionPost" class="form-label mt-2">Post:</label>
-                                          <input type="text" class="form-control" id="newDiscussionPost">
-                                      </form>
-                                  </div>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-outline-secondary"
-                                      data-bs-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary" id="create--button" onclick="createPost()"
-                                      data-bs-dismiss="modal">Add</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-          
+          <img style="width: 100%;"src="/images/other-images/aboutuscinema.jpg" alt="Italian Trulli">
+          <div>
+            <h1 class="text-center p-4" style="color: rgb(198, 198, 198);background-image: linear-gradient(to right,  #262727, #343636, #505656, #696969, #767676, #878787);;">About Us</h1>
+          </div>
+
+          <div style="padding-left: 200px; padding-right: 200px;padding-bottom: 30px;">
+            <h5 style="color: rgb(198, 198, 198);">QA Cinema has been a part of Doesnotexistshire's community for the past 10,330 years, and are proud to be a provider of entertainment for all ages.</h5>
+            <h5 style="color: rgb(198, 198, 198);">John Smith founded this cinema while pondering what he was going to have for dinner after a rather intense game of charades. He thought the whole endevour of acting like a fool was absolutely exhausting, and enjoyed watching other people acting like idiots much more. And thus, the cinema was born.</h5>
+            <h5 style="color: rgb(198, 198, 198);">How popcorn was invented (which is a QA Cinema invention) is a story that we can't go into today. Let's just say that it involved a missile silo, a whole lot of corn kernels, and a military grade flamethrower.</h5>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <img style="width: 600px;height: 400px;"src="/images/other-images/about-us-stock.jpg" alt="Italian Trulli">
               </div>
-              
+              <div class="col">
+                <img style="width: 600px;height: 400px;"src="/images/other-images/about-us-stock2.jpg" alt="Italian Trulli">
               </div>
-              <div id="myPost"></div>
-              <article>
-                <h2>Geoff</h2>
-                <p>Never seen such a sticky floor!!!  I couldnt have fallen over if i had tried!</p>
-              </article>
-              <article>
-                <h2>Karen</h2>
-                <s>Dont get the big deal with this glorious leader</s>
-              </article>
-              <article>
-                <h2>Michael</h2>
-                <p>Minions should have won best picture</p>
-              </article>
-              <article>
-                <h2>Candice</h2>
-                <p>Excellent staff couldn't say a bad word about them even if I wanted too.</p>
-              </article>
-              <article>
-                <h2>Dwayne</h2>
-                <p>I dont think the rock is in enough movies!</p>
-              </article>
-              <article>
-                <h2>xX_RockLover_Xx</h2>
-                <p>The rock doesnt get paid enough for what he does.</p>
-              </article>
-              <article>
-                <h2>Mr Johnson</h2>
-                <p>I dont get all the hates for the rock i think he really cool personally.</p>
-              </article>
             </div>
-          </main>
+          </div>
 
+          <div style="padding-left: 200px; padding-right: 200px;padding-top: 30px; padding-bottom: 30px;">
+            <h5 style="color: rgb(198, 198, 198);">Overcharging customers for a large holographic rectangle projected on to a wall made John Smith giddy with joy, so it didn't take long for John to produce 1,200,384 cinemas nationwide, worldwide, planetwide, and even galaxywide. </h5>
+            <h5 style="color: rgb(198, 198, 198);">In fact, John Smith became so powerful that his cinema worker armarda is one of the biggest in the galaxy, and he is known by his subjects as an irritable and ruthless leader. The resistance claims that under John's leadership, countless atrocities have been committed against sentient life across the Milky Way. These disgusting lies are not true, and our glorious leader John is a our supreme overlord that we must be obedient for!</h5>
+            <h5 style="color: rgb(198, 198, 198);">The hotdogs in our cinemas are made of 100% hotdog, and even taste like hotdogs, so you know that you are getting a product that both is made of and tastes like hotdog.</h5>
+            <h5 style="color: rgb(198, 198, 198);">We hope that you enjoy your time at our cinemas! If you do not enjoy your time at our cinemas (which is not possible) you will be tried and executed swiftly by our glorious leader.</h5>
+          </div>
 
-
-
-
+          <div style="padding-left: 200px; padding-right: 200px;padding-top: 30px; padding-bottom: 30px;">
+            <h5 style="color: rgb(198, 198, 198);">In all seriousness, thank you for looking at our website and we hope that you enjoyed using it! </h5>
+            <h5 style="color: rgb(198, 198, 198);">It took a lot of blood, sweat, tears, and coffee (on my part anyway).</h5>
+            <h5 style="color: rgb(198, 198, 198);">We all had our parts to play in this project, with our own individual strengths which we utilised to their full potential. </h5>
+            <h5 style="color: rgb(198, 198, 198);">Let's introduce you to the dream team that made it happen:</h5>
+          </div>
 
           <div class="mt-auto">
             <footer class = "bg-dark" style="color:rgb(198, 198, 198);padding-left: 20px; padding-right: 20px;padding-top: 10px;">
@@ -155,7 +108,7 @@
                   <ul class="nav flex-column">
                     <li class="nav-item mb-2"><a href="/pages/footer-pages/t&c.html" class="nav-link p-0 link-light" style="color: rgb(198, 198, 198);">Terms & Conditions</a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-light" style="color: rgb(198, 198, 198);">Cookie Policy</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-light" style="color: rgb(198, 198, 198);">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="/pages/footer-pages/faq.html" class="nav-link p-0 link-light" style="color: rgb(198, 198, 198);">FAQs</a></li>
                   </ul>
                 </div>
           
@@ -175,6 +128,7 @@
                     <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                       <label for="newsletter1" class="visually-hidden" style="color: rgb(198, 198, 198);">Email address</label>
                       <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                      
                       <button class="btn btn-primary" type="button">Subscribe</button>
                     </div>
                   </form>
@@ -191,11 +145,10 @@
               </div>
             </footer>
           </div>
-      
+
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
   </body>
-  <script src="/scripts/discussionBoard.js"></script>
 </html>
