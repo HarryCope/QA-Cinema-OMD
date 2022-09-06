@@ -78,7 +78,7 @@
             <h5 class="text-start" style="text-shadow: 1px 1px #000000" ;>Join us on the 22nd September at selected
               locations for our Star Wars Marathon!</h5>
             <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal1"
-              onclick="bookingFunction1()">Book Now</button>
+               onclick="bookingFunction1()" >Book Now</button>
 
             <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
               aria-hidden="true">
@@ -116,9 +116,6 @@
                         <small>Occupied</small>
                       </li>
                     </ul>
-
-                    <p value="1" id="bookingScreen1">Screen:1</p>
-                    <p value="1" id="bookingFilmId1"></p>
 
                     <div class="container1">
                       <div class="movie-screen">
@@ -212,7 +209,7 @@
                       </div>
 
                       <div style="padding-bottom: 20px; padding-top: 10px;">
-                        <button type="button" class="btn btn-secondary">Book Now</button>
+                        <button type="button" class="btn btn-secondary" onclick="createBooking1()">Book Now</button>
                       </div>
                       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
                       <script src="/scripts/booking-starwars.js"></script>
@@ -248,7 +245,7 @@
             <h5 class="text-start" style="text-shadow: 1px 1px #000000" ;>Once you've met someone you never really
               forget them. It just takes a while for your memories to return.</h5>
             <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal2"
-              onclick="bookingFunction2()">Book Now</button>
+              onclick="bookingFunction2()" >Book Now</button>
 
             <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
               aria-hidden="true">

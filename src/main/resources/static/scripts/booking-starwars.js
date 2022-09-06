@@ -1,23 +1,24 @@
+const bookingUrl = "http://localhost:8081/Booking";
+let total1 = document.getElementById("total1");
+
+let filmTime = document.getElementById('movie1');
+
+let newBookingSeat = document
+let newBookingName = document.getElementById('nameInput1');
+let newBookingTime = filmTime.options[filmTime.selectedIndex].text;
+let newBookingPrice = document.getElementById('total1');
+
+
 function bookingFunction1() {
-    const bookingUrl = "http://localhost:8081/Booking";
+    
     const seats = document.querySelectorAll(".row1 .seat1:not(.occupied1)");
     const seatContainer = document.querySelector(".row-container1");
 
     const count1 = document.getElementById("count1");
-    const total1 = document.getElementById("total1");
+   
     const movieSelect1 = document.getElementById("movie1");
 
-    var filmTime = document.getElementById('movie1');
-
-    const newBookingFilmId = document.getElementById('bookingFilmId1');
-    const newBookingSeat = document
-    const newBookingName = document.getElementById('nameInput1');
-    const newBookingScreen = document.getElementById('bookingScreen1')
-    const newBookingTime = filmTime.options[filmTime.selectedIndex].text;
-    const newBookingPrice = document.getElementById('total1');
-
     populateUI();
-    createBooking();
 
     let ticketPrice1 = +movieSelect1.value;
 
@@ -85,19 +86,17 @@ function bookingFunction1() {
     updateSelectedCount();
 }
 
-    const createBooking = () => {
-        const newBookingFilmIdCreate = newBookingFilmId.value;
-        const newBookingSeatCreate = newBookingSeat.value;
-        const newBookingNameCreate = newBookingName.value;
-        const newBookingScreenCreate = newBookingScreen.value;
-        const newBookingTimeCreate = newBookingTime.text;
-        const newBookingPriceCreate = newBookingPrice.value;
+const createBooking1 = () => {
+        let newBookingSeatCreate = newBookingSeat.value;
+        let newBookingNameCreate = newBookingName.value;
+        let newBookingTimeCreate = newBookingTime.text;
+        let newBookingPriceCreate = newBookingPrice.text;
       
         let bookingData = {
-            "film_id": newBookingFilmIdCreate,
+            "film_id": "1",
             "bookingSeatNumber": newBookingSeatCreate,
             "bookingName": newBookingNameCreate,
-            "bookingScreen": newBookingScreenCreate,
+            "bookingScreen":"1",
             "bookingTime": newBookingTimeCreate,
             "bookingPrice": newBookingPriceCreate
         }
@@ -112,7 +111,7 @@ function bookingFunction1() {
         })
             .then(response => response.json())
             .then(model => {
-                console.log(model);
+                //console.log(model);
                 readBooking();
             })
             .catch(err => console.error(`error ${err}`));
@@ -139,4 +138,3 @@ function bookingFunction1() {
                 }
               }
         };
-
