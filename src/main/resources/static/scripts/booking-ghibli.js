@@ -53,7 +53,7 @@ function bookingFunction2() {
 
     // Movie select event
 
-    movieSelect1.addEventListener("change", function(e) {
+    movieSelect2.addEventListener("change", function(e) {
     ticketPrice2 = +movieSelect2.value;
     setMovieData(e.target.selectedIndex, e.target.value);
     updateSelectedCount();
