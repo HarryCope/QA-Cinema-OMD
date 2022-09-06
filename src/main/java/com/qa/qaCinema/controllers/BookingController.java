@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.qa.qaCinema.Services.BookingService;
 import com.qa.qaCinema.models.Booking;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/Booking")
 public class BookingController {
@@ -39,6 +41,12 @@ public class BookingController {
 		Booking createBooking = service.addBooking(booking);
 		return new ResponseEntity<Booking>(createBooking, HttpStatus.CREATED);
 	}
+	
+//	@PostMapping("/createBooking")
+//	public  ResponseEntity<String> createBooking(@RequestBody Booking booking) {
+//		Booking createBooking = service.addBooking(booking);
+//		return ResponseEntity.ok().header("Access-Control-Allow-Origin", "http://127.0.0.1:5501").body(createBooking.toString());
+//	}
 	
 	@PutMapping("/updateBooking/{booking_Id}")
 	public ResponseEntity<Booking> updateBooking(@RequestBody Booking booking, @PathVariable Long booking_Id) {
