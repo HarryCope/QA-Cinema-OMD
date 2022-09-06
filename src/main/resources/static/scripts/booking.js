@@ -1,23 +1,16 @@
+const bookUrl = "http://localhost:8081/book";
 const seats = document.querySelectorAll(".row .seat:not(.occupied)");
 const seatContainer = document.querySelector(".row-container");
 const count = document.getElementById("count");
 const total = document.getElementById("total");
 const movieSelect = document.getElementById("movie");
 
-// Another Approach
-
-// seats.forEach(function(seat) {
-//   seat.addEventListener("click", function(e) {
-//     seat.classList.add("selected");
-//     const selectedSeats = document.querySelectorAll(".container .selected");
-//     selectedSeathLength = selectedSeats.length;
-//     count.textContent = selectedSeathLength;
-//     let ticketPrice = +movieSelect.value;
-//     total.textContent = ticketPrice * selectedSeathLength;
-//   });
-// });
-
-// localStorage.clear();
+const newBookingFilmId = document
+const newBookingSeat = document
+const newBookingName = document
+const newBookingScreen = document
+const newBookingTime = document
+const newBookingPrice = document
 
 populateUI();
 
@@ -84,3 +77,58 @@ seatContainer.addEventListener("click", function(e) {
 
 // Initial count and total rendering
 updateSelectedCount();
+
+const readBooking = () => {
+	
+	fetch(`${bookUrl}/getBooking`)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (bookingData) {
+                appendData(bookingData);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(bookingData) {
+            var mainContainer = document.getElementById("bookingDataList");
+            for (var i = 0; i < bookingData.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = 'Film id: ' + bookingData[i].film_id + 'Seat number: ' + bookingData[i].bookingSeatNumber + 'Name: ' + bookingData[i].bookingName + 'Screen number: ' + bookingData[i].bookingScreen + 'Booking time: ' + bookingData[i].bookingTime + 'Price: ' + bookingData[i].bookingPrice;
+                mainContainer.appendChild(div);
+            }
+          }
+};
+
+const createBooking = () => {
+  const newBookingFilmIdCreate = newBookingFilmId.value;
+  const newBookingSeatCreate = newBookingSeat.value;
+  const newBookingNameCreate = newBookingName.value;
+  const newBookingScreenCreate = newBookingScreen.value;
+  const newBookingTimeCreate = newBookingTime.value;
+  const newBookingPriceCreate = newBookingPrice.value;
+
+  let bookingData = {
+      "film_id": newPokemonNameCreate,
+      "bookingSeatNumber": newPokemonTypeCreate,
+      "bookingName": newPokemonLevelCreate,
+      "bookingScreen": newPokemonHeldItemCreate,
+      "bookingTime": newPokemonHeldItemCreate,
+      "bookingPrice": newPokemonHeldItemCreate
+  }
+  console.log(bookingData)
+
+  fetch(`${bookUrl}/createBooking`, {
+      method: "POST",
+      body: JSON.stringify(bookingData),
+      headers: {
+          "Content-Type": "application/json"
+      }
+  })
+      .then(response => response.json())
+      .then(model => {
+          console.log(model);
+          readBooking();
+      })
+      .catch(err => console.error(`error ${err}`));
+};
