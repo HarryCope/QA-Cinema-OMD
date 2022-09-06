@@ -15,6 +15,7 @@
   
     <body>
       <div class="main-body">
+
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
           <a class="navbar-brand" href="/index.html"><img src="/images/logos/QA-Cinema-Logo.png" style="height:60px; width:100px;"></a>
           <div class="container-fluid">
@@ -30,7 +31,6 @@
                   <a class="nav-link" aria-current="page" href="/pages\bookings.html">Bookings</a>
                 </li>
                 <li class="nav-item">
-
                   <a class="nav-link" aria-current="page" href="/pages/bookings.html">Events</a>
                 </li>
                 <li class="nav-item">
@@ -48,15 +48,6 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/pages\Classifiactions.html">Classifications</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/pages/gettingthere.html">Getting There</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/pages/PlacesToGo.html">Places To Go</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/pages/Classifications.html">Classifications</a>
-                </li>
               </ul>
               <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -65,122 +56,11 @@
             </div>
           </div>
         </nav>
+       
+
+          <div id="bookingDataList"></div>
           
-        <div class="movie-container">
-          <label>Pick a time:</label>
-          <select id="movie">
-              <option value="10.50">14:00</option>
-              <option value="10.50">16:00</option>
-              <option value="10.50">18:00</option>
-              <option value="10.50">20:00</option>
-          </select>
-        </div>
 
-        <ul class="showcase">
-          <li>
-              <div class="seat"></div>
-              <small>N/A</small>
-          </li>
-          <li>
-              <div class="seat selected"></div>
-              <small>Selected</small>
-          </li>
-          <li>
-              <div class="seat occupied"></div>
-              <small>Occupied</small>
-          </li>
-        </ul>
-
-        <div class="container">
-          <div class="movie-screen">
-              <img src='/images/posters/screen.png' alt='screen' />
-          </div>
-
-          <div class="row-container">
-              <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-              </div>
-              <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat occupied"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-              </div>
-              <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat occupied"></div>
-                  <div class="seat occupied"></div>
-              </div>
-              <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-              </div>
-              <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat occupied"></div>
-                  <div class="seat occupied"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-              </div>
-              <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-              </div>
-              <div class="row">
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat"></div>
-                  <div class="seat occupied"></div>
-                  <div class="seat occupied"></div>
-                  <div class="seat occupied"></div>
-                  <div class="seat"></div>
-              </div>
-              <h5 class='subtitle'>Standard - £10.50</h5>
-
-              <div class="text-wrapper">
-                  <p class="text">Selected Seats <span id='count'>0</span>
-                      <p class="text">Total Price £<span id="total">0</span></p>
-              </div>
-            </div>
-          <div style="padding-bottom: 20px;">
-            <button type="button" class="btn btn-secondary">Book Now</button>
-          </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="/scripts/booking.js"></script>
-          
-      </div>
       
           <div class="mx-auto main-footer">
             <footer class = "bg-dark">
@@ -236,9 +116,9 @@
             </footer>
           </div>
         
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-
+      </div>
+      <!-- Option 1: Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+      <script src="/scripts/booking.js"></script>
   </body>
 </html>
