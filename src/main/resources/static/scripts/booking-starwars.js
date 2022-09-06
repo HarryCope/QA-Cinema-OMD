@@ -1,5 +1,5 @@
 const bookingUrl = "http://localhost:8081/Booking";
-let total1 = document.getElementById("total1");
+//let total1 = document.getElementById("total1");
 
 let filmTime = document.getElementById('movie1');
 
@@ -89,8 +89,8 @@ function bookingFunction1() {
 const createBooking1 = () => {
         let newBookingSeatCreate = newBookingSeat.value;
         let newBookingNameCreate = newBookingName.value;
-        let newBookingTimeCreate = newBookingTime.text;
-        let newBookingPriceCreate = newBookingPrice.text;
+        let newBookingTimeCreate = newBookingTime.textContent;
+        let newBookingPriceCreate = newBookingPrice.textContent;
       
         let bookingData = {
             "film_id": "1",
