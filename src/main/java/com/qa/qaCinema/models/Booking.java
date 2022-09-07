@@ -16,7 +16,7 @@ public class Booking {
 		super();
 	}
 
-	public Booking(Long film_Id, int bookingSeatNumber, String bookingName, String bookingScreen, String bookingTime,
+	public Booking(Long film_Id, String bookingSeatNumber, String bookingName, String bookingScreen, String bookingTime,
 			String bookingPrice) {
 		super();
 		this.film_Id = film_Id;
@@ -27,7 +27,7 @@ public class Booking {
 		this.bookingPrice = bookingPrice;
 	}
 
-	public Booking(Long booking_Id, Long film_Id, int bookingSeatNumber, String bookingName, String bookingScreen,
+	public Booking(Long booking_Id, Long film_Id, String bookingSeatNumber, String bookingName, String bookingScreen,
 			String bookingTime, String bookingPrice) {
 		super();
 		this.booking_Id = booking_Id;
@@ -48,7 +48,7 @@ public class Booking {
 	
 	//May change to ArrayList at some point for multiple bookings
 	@Column
-	private int bookingSeatNumber;
+	private String bookingSeatNumber;
 	
 	//This is the name of the person booking
 	@Column
@@ -79,11 +79,11 @@ public class Booking {
 		this.film_Id = film_Id;
 	}
 
-	public int getBookingSeatNumber() {
+	public String getBookingSeatNumber() {
 		return bookingSeatNumber;
 	}
 
-	public void setBookingSeatNumber(int bookingSeatNumber) {
+	public void setBookingSeatNumber(String bookingSeatNumber) {
 		this.bookingSeatNumber = bookingSeatNumber;
 	}
 
@@ -141,7 +141,8 @@ public class Booking {
 			return false;
 		Booking other = (Booking) obj;
 		return Objects.equals(bookingName, other.bookingName) && Objects.equals(bookingPrice, other.bookingPrice)
-				&& Objects.equals(bookingScreen, other.bookingScreen) && bookingSeatNumber == other.bookingSeatNumber
+				&& Objects.equals(bookingScreen, other.bookingScreen)
+				&& Objects.equals(bookingSeatNumber, other.bookingSeatNumber)
 				&& Objects.equals(bookingTime, other.bookingTime) && Objects.equals(film_Id, other.film_Id);
 	}
 	
