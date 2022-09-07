@@ -91,11 +91,17 @@
                     <h5 class="modal-title" id="exampleModalLabel1">Book Your Seats</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-
+                  <script>
+                    function getSelectValue() {
+                      let filmTime = document.getElementById('movie1');
+                      newBookingTime = filmTime.options[filmTime.selectedIndex].text;
+                      console.log(newBookingTime)
+                    }
+                  </script>
                   <div class="modal-body">
                     <div class="movie-container">
                       <label>Pick a time:</label>
-                      <select id="movie1">
+                      <select id="movie1" onchange="getSelectValue()">
                         <option value="10.50">14:00</option>
                         <option value="10.50">16:00</option>
                         <option value="10.50">18:00</option>
