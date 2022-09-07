@@ -32,8 +32,8 @@ public class BookingServiceUnitTest {
 	@Test
 	public void addBooking_ValidBooking_SaveBooking() {
 		
-		Booking saveBooking = new Booking(1L, 5, "Harry", "3", "18:00", "£10.00");
-		Booking repoBooking = new Booking(1L, 1L, 5, "Harry", "3", "18:00", "£10.00");
+		Booking saveBooking = new Booking(1L, "5", "Harry", "3", "18:00", "£10.00");
+		Booking repoBooking = new Booking(1L, 1L, "5", "Harry", "3", "18:00", "£10.00");
 
 		Mockito.when(this.service.addBooking(saveBooking)).thenReturn(repoBooking);
 		assertEquals(repoBooking, this.repo.save(saveBooking));
@@ -59,7 +59,7 @@ public class BookingServiceUnitTest {
 	 @Test
 	    public void readBooking_ValidBooking_ReadBooking() {
 	        List<Booking> bookList = new ArrayList<>();
-	        bookList.add(new Booking(1L, 1L, 5, "Harry", "3", "18:00", "£10.00"));
+	        bookList.add(new Booking(1L, 1L, "5", "Harry", "3", "18:00", "£10.00"));
 
 	        Mockito.when(this.service.readAllBookings()).thenReturn(bookList);
 	        assertEquals(bookList, this.service.readAllBookings());

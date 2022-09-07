@@ -1,10 +1,21 @@
+const bookingUrl = "http://localhost:8081/Booking";
+//let total1 = document.getElementById("total1");
+
+let filmTime = document.getElementById('movie1');
+
+let newBookingSeat = document
+let newBookingName = document.getElementById('nameInput1');
+let newBookingTime = filmTime.options[filmTime.selectedIndex].text;
+let newBookingPrice = document.getElementById('total1');
+
+
 function bookingFunction1() {
-    const bookUrl = "http://localhost:8081/book";
+    
     const seats = document.querySelectorAll(".row1 .seat1:not(.occupied1)");
     const seatContainer = document.querySelector(".row-container1");
 
     const count1 = document.getElementById("count1");
-    const total1 = document.getElementById("total1");
+   
     const movieSelect1 = document.getElementById("movie1");
 
     populateUI();
@@ -74,3 +85,36 @@ function bookingFunction1() {
     // Initial count and total rendering
     updateSelectedCount();
 }
+
+const createBooking1 = () => {
+        //let newBookingSeatCreate = newBookingSeat.value;
+        let newBookingNameCreate = newBookingName.value;
+        let newBookingTimeCreate = newBookingTime;
+        let newBookingPriceCreate = newBookingPrice.textContent;
+      
+        let bookingData1 = {
+            "film_Id": "1",
+            "bookingSeatNumber": JSON.stringify(seatsIndex),
+            "bookingName": newBookingNameCreate,
+            "bookingScreen":"1",
+            "bookingTime": newBookingTimeCreate,
+            "bookingPrice": newBookingPriceCreate
+        }
+        console.log(bookingData1)
+      
+        fetch(`${bookingUrl}/createBooking`, {
+            method: "POST",
+            body: JSON.stringify(bookingData1),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+            .then(response => response.json())
+            .then(model => {
+                //console.log(model);
+            
+            })
+            .catch(err => console.error(`error ${err}`));
+            console.log(seatsIndex)
+      };
+
