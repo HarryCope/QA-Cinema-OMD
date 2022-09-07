@@ -1,6 +1,6 @@
-const bookingUrl = "http://localhost:8081/Booking";
+const bookingUrlRead = "http://localhost:8081/Booking";
 
-  fetch(`${bookingUrl}/getBooking`)
+  fetch(`${bookingUrlRead}/getBooking`)
           .then(function (response) {
               return response.json();
           })
