@@ -22,7 +22,7 @@ public class BookingsTest {
 	@BeforeAll
 	public static void buildBooking() {
 		System.out.println("Building Booking");
-		testBooking = new Booking(1L, 1L, 5, "Harry", "2", "18:00", "£5.00");
+		testBooking = new Booking(1L, 1L, "5", "Harry", "2", "18:00", "£5.00");
 	}
 	
 	@Test
@@ -31,11 +31,11 @@ public class BookingsTest {
 
 		assertTrue(bookingOne instanceof Booking == true);
 
-		Booking bookingTwo = new Booking(2L, 5, "Jack", "5", "17:00", "£10.00");
+		Booking bookingTwo = new Booking(2L, "5", "Jack", "5", "17:00", "£10.00");
 
 		assertTrue(bookingTwo instanceof Booking == true);
 		assertEquals(2L, bookingTwo.getFilm_Id());
-		assertEquals(5, bookingTwo.getBookingSeatNumber());
+		assertEquals("5", bookingTwo.getBookingSeatNumber());
 		assertEquals("Jack", bookingTwo.getBookingName());
 		assertEquals("5", bookingTwo.getBookingScreen());
 		assertEquals("17:00", bookingTwo.getBookingTime());
@@ -48,12 +48,12 @@ public class BookingsTest {
 
 		assertTrue(bookingOne instanceof Booking == true);
 
-		Booking bookingTwo = new Booking(1L, 2L, 5, "Jack", "5", "17:00", "£10.00");
+		Booking bookingTwo = new Booking(1L, 2L, "5", "Jack", "5", "17:00", "£10.00");
 
 		assertTrue(bookingTwo instanceof Booking == true);
 		assertEquals(1L, bookingTwo.getBooking_Id());
 		assertEquals(2L, bookingTwo.getFilm_Id());
-		assertEquals(5, bookingTwo.getBookingSeatNumber());
+		assertEquals("5", bookingTwo.getBookingSeatNumber());
 		assertEquals("Jack", bookingTwo.getBookingName());
 		assertEquals("5", bookingTwo.getBookingScreen());
 		assertEquals("17:00", bookingTwo.getBookingTime());
@@ -71,7 +71,7 @@ public class BookingsTest {
 	
 	@Test
     public void setIdTest() throws NoSuchFieldException, IllegalAccessException {
-        Booking testEntry = new Booking(1L, 1L, 5, "Harry", "2", "18:00", "£5.00");
+        Booking testEntry = new Booking(1L, 1L, "5", "Harry", "2", "18:00", "£5.00");
         testEntry.setBooking_Id(5L);
 
        Field expected = testEntry.getClass().getDeclaredField("booking_Id");
@@ -81,7 +81,7 @@ public class BookingsTest {
 	
 	@Test
     public void setFilmIdTest() throws NoSuchFieldException, IllegalAccessException {
-        Booking testEntry = new Booking(1L, 1L, 5, "Harry", "2", "18:00", "£5.00");
+        Booking testEntry = new Booking(1L, 1L, "5", "Harry", "2", "18:00", "£5.00");
         testEntry.setFilm_Id(5L);
 
        Field expected = testEntry.getClass().getDeclaredField("film_Id");
@@ -91,17 +91,17 @@ public class BookingsTest {
 	
 	@Test
     public void setSeatNumberTest() throws NoSuchFieldException, IllegalAccessException {
-        Booking testEntry = new Booking(1L, 1L, 5, "Harry", "2", "18:00", "£5.00");
-        testEntry.setBookingSeatNumber(10);
+        Booking testEntry = new Booking(1L, 1L, "5", "Harry", "2", "18:00", "£5.00");
+        testEntry.setBookingSeatNumber("10");
 
        Field expected = testEntry.getClass().getDeclaredField("bookingSeatNumber");
         expected.setAccessible(true);
-        assertEquals(expected.get(testEntry), 10);
+        assertEquals(expected.get(testEntry), "10");
     }
 	
 	@Test
     public void setBookingNameTest() throws NoSuchFieldException, IllegalAccessException {
-        Booking testEntry = new Booking(1L, 1L, 5, "Harry", "2", "18:00", "£5.00");
+        Booking testEntry = new Booking(1L, 1L, "5", "Harry", "2", "18:00", "£5.00");
         testEntry.setBookingName("Westley");
 
        Field expected = testEntry.getClass().getDeclaredField("bookingName");
@@ -111,7 +111,7 @@ public class BookingsTest {
 	
 	@Test
     public void setBookingScreenTest() throws NoSuchFieldException, IllegalAccessException {
-        Booking testEntry = new Booking(1L, 1L, 5, "Harry", "2", "18:00", "£5.00");
+        Booking testEntry = new Booking(1L, 1L, "5", "Harry", "2", "18:00", "£5.00");
         testEntry.setBookingScreen("2");
 
        Field expected = testEntry.getClass().getDeclaredField("bookingScreen");
@@ -121,7 +121,7 @@ public class BookingsTest {
 	
 	@Test
     public void setBookingTimeTest() throws NoSuchFieldException, IllegalAccessException {
-        Booking testEntry = new Booking(1L, 1L, 5, "Harry", "2", "18:00", "£5.00");
+        Booking testEntry = new Booking(1L, 1L, "5", "Harry", "2", "18:00", "£5.00");
         testEntry.setBookingTime("19:00");
 
        Field expected = testEntry.getClass().getDeclaredField("bookingTime");
@@ -131,7 +131,7 @@ public class BookingsTest {
 	
 	@Test
     public void setBookingPriceTest() throws NoSuchFieldException, IllegalAccessException {
-        Booking testEntry = new Booking(1L, 1L, 5, "Harry", "2", "18:00", "£5.00");
+        Booking testEntry = new Booking(1L, 1L, "5", "Harry", "2", "18:00", "£5.00");
         testEntry.setBookingPrice("£15.00");
 
        Field expected = testEntry.getClass().getDeclaredField("bookingPrice");
