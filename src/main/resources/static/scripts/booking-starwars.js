@@ -90,8 +90,6 @@ const createBooking1 = () => {
         let newBookingNameCreate = newBookingName.value;
         let newBookingTimeCreate = newBookingTime;
         let newBookingPriceCreate = newBookingPrice.textContent;
-        //
-        console.log(newBookingTimeCreate);
       
         let bookingData1 = {
             "film_Id": "1",
