@@ -24,15 +24,14 @@ fetch(`${bookingUrlBook}/getBooking`)
 }
 
 const deleteBooking = () => {
+    
 
-
-    let idToDelete = document.getElementById("delete' + bookingData1[i].booking_Id + '");
+    let idToDelete = document.getElementById("delete1");
     let idToDeleteValue = idToDelete.value;
 
     console.log(idToDeleteValue);
-    idToDelete = idToDelete.replace(/\D/g,'');
 
-    fetch(`${bookingUrlBook}/deleteBooking/${idToDelete}`, {
+    fetch(`${bookingUrlBook}/deleteBooking/${idToDeleteValue}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json"
