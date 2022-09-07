@@ -1,5 +1,5 @@
 const bookingUrlBook = "http://localhost:8081/Booking";
-
+let bookingID;
 
 
 fetch(`${bookingUrlBook}/getBooking`)
@@ -20,18 +20,14 @@ fetch(`${bookingUrlBook}/getBooking`)
                 + bookingData1[i].bookingTime + '<div> Price: £' + bookingData1[i].bookingPrice + '</div> <div style="padding-bottom:20px;"><button id="update' + bookingData1[i].booking_Id + 
                 '" type="button" class="btn btn-secondary">Update</button> <button  onclick="deleteBooking()" value="' + bookingData1[i].booking_Id + '" id="delete' + bookingData1[i].booking_Id + '" type="button" class="btn btn-secondary">Delete</button></div>';
                 mainContainer.appendChild(div);
+                bookingID = bookingData1[i].booking_Id;
             }
+            
 }
 
 const deleteBooking = () => {
     
-
-    let idToDelete = document.getElementById("delete1");
-    let idToDeleteValue = idToDelete.value;
-
-    console.log(idToDeleteValue);
-
-    fetch(`${bookingUrlBook}/deleteBooking/${idToDeleteValue}`, {
+    fetch(`${bookingUrlBook}/deleteBooking/${bookingID}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json"
