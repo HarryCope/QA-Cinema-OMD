@@ -12,6 +12,8 @@
             <title>QA Cinema - Current Releases</title>
 
             <link rel="stylesheet" href="/styles\CurrentReleases.css">
+            <link rel="stylesheet" href="/modal.css">
+
 
             <!-- Compiled and minified JavaScript -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -74,7 +76,152 @@
             <a href="" class="an">Jon Watts</a>
             <p class="an" style="padding-top: 10px;">Tom Holland &nbsp &nbsp Zendaya &nbsp &nbsp Marisa Tomei</p>
             <p class="des">For the first time in the cinematic history of Spider-Man, our friendly neighbourhood hero is unmasked and no longer able to separate his normal life from the high-stakes of being a Super Hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.</p>
-            <button class="read-more">Book Now</button>
+            <button class="read-more"data-bs-toggle="modal" data-bs-target="#exampleModal1">Book Now</button>
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+              aria-hidden="true">
+              <div class="modal-dialog">
+
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Book Your Seats</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div class="movie-container">
+                      <label>Pick a time:</label>
+                      <select id="movie1">
+                        <option value="10.50">14:00</option>
+                        <option value="10.50">16:00</option>
+                        <option value="10.50">18:00</option>
+                        <option value="10.50">20:00</option>
+                      </select>
+                    </div>
+
+                    <ul class="showcase">
+                      <li>
+                        <div class="seat1"></div>
+                        <small>N/A</small>
+                      </li>
+                      <li>
+                        <div class="seat1 selected1"></div>
+                        <small>Selected</small>
+                      </li>
+                      <li>
+                        <div class="seat1 occupied1"></div>
+                        <small>Occupied</small>
+                      </li>
+                    </ul>
+
+                    <div class="container1">
+                      <div class="movie-screen">
+                        <img src='/images/posters/screen.png' alt='screen' />
+                      </div>
+
+                      <div class="row-container1">
+                        <div class="row1">
+                          <div class="seat1" id="1"></div>
+                          <div class="seat1" id="2"></div>
+                          <div class="seat1" id="3"></div>
+                          <div class="seat1" id="4"></div>
+                          <div class="seat1" id="5"></div>
+                          <div class="seat1" id="6"></div>
+                          <div class="seat1" id="7"></div>
+                          <div class="seat1" id="8"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="9"></div>
+                          <div class="seat1" id="10"></div>
+                          <div class="seat1" id="11"></div>
+                          <div class="seat1" id="12"></div>
+                          <div class="seat1 occupied1" id="13"></div>
+                          <div class="seat1" id="14"></div>
+                          <div class="seat1" id="15"></div>
+                          <div class="seat1" id="16"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="17"></div>
+                          <div class="seat1" id="18"></div>
+                          <div class="seat1" id="19"></div>
+                          <div class="seat1" id="20"></div>
+                          <div class="seat1" id="21"></div>
+                          <div class="seat1" id="22"></div>
+                          <div class="seat1 occupied" id="23"></div>
+                          <div class="seat1 occupied" id="24"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="25"></div>
+                          <div class="seat1" id="26"></div>
+                          <div class="seat1" id="27"></div>
+                          <div class="seat1" id="28"></div>
+                          <div class="seat1" id="29"></div>
+                          <div class="seat1" id="30"></div>
+                          <div class="seat1" id="31"></div>
+                          <div class="seat1" id="32"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="33"></div>
+                          <div class="seat1" id="34"></div>
+                          <div class="seat1" id="35"></div>
+                          <div class="seat1 occupied" id="36"></div>
+                          <div class="seat1 occupied" id="37"></div>
+                          <div class="seat1" id="38"></div>
+                          <div class="seat1" id="39"></div>
+                          <div class="seat1" id="40"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="41"></div>
+                          <div class="seat1" id="42"></div>
+                          <div class="seat1" id="43"></div>
+                          <div class="seat1" id="44"></div>
+                          <div class="seat1" id="45"></div>
+                          <div class="seat1" id="46"></div>
+                          <div class="seat1" id="47"></div>
+                          <div class="seat1" id="48"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="49"></div>
+                          <div class="seat1" id="50"></div>
+                          <div class="seat1" id="51"></div>
+                          <div class="seat1" id="52"></div>
+                          <div class="seat1 occupied" id="53"></div>
+                          <div class="seat1 occupied" id="54"></div>
+                          <div class="seat1 occupied" id="55"></div>
+                          <div class="seat1" id="56"></div>
+
+                        </div>
+                        <h5 class='subtitle'>Standard - £10.50</h5>
+
+                        <div class="text-wrapper">
+                          <p class="text">Selected seats <span id='count1'>0</span>
+                          <p class="text">Total Price £<span id="total1">0</span></p>
+                        </div>
+                      </div>
+
+                      <div class="input-group" style="padding-top: 10px;">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="">Name</span>
+                        </div>
+                        <input type="text" class="form-control" id="nameInput1">
+                      </div>
+
+                      <div style="padding-bottom: 20px; padding-top: 10px;">
+                        <button type="button" class="btn btn-secondary" onclick="createBooking1()">Book Now</button>
+                      </div>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                      <script src="/scripts/booking-starwars.js"></script>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -91,7 +238,155 @@
             <a href="" class="an">Kyle Balda</a>
             <p class="an" style="padding-top: 10px;">Steve Carell &nbsp &nbsp Jean-Claude Van Damme &nbsp &nbsp Russell Brand</p>
             <p class="des">The untold story of one twelve-year-old's dream to become the world's greatest supervillain.</p>
-            <button class="read-more">Book Now</button>
+            <button class="read-more" data-bs-toggle="modal" data-bs-target="#exampleModal2">Book Now</button>
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+              aria-hidden="true">
+              <div class="modal-dialog">
+
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel2">Book Your Seats</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div class="movie-container">
+                      <label>Pick a time:</label>
+                      <select id="movie1">
+                        <option value="10.50">14:00</option>
+                        <option value="10.50">16:00</option>
+                        <option value="10.50">18:00</option>
+                        <option value="10.50">20:00</option>
+                      </select>
+                    </div>
+
+                    <ul class="showcase">
+                      <li>
+                        <div class="seat1"></div>
+                        <small>N/A</small>
+                      </li>
+                      <li>
+                        <div class="seat1 selected1"></div>
+                        <small>Selected</small>
+                      </li>
+                      <li>
+                        <div class="seat1 occupied1"></div>
+                        <small>Occupied</small>
+                      </li>
+                    </ul>
+
+                    <div class="container1">
+                      <div class="movie-screen">
+                        <img src='/images/posters/screen.png' alt='screen' />
+                      </div>
+
+                      <div class="row-container1">
+                        <div class="row1">
+                          <div class="seat1" id="1"></div>
+                          <div class="seat1" id="2"></div>
+                          <div class="seat1" id="3"></div>
+                          <div class="seat1" id="4"></div>
+                          <div class="seat1" id="5"></div>
+                          <div class="seat1" id="6"></div>
+                          <div class="seat1" id="7"></div>
+                          <div class="seat1" id="8"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="9"></div>
+                          <div class="seat1" id="10"></div>
+                          <div class="seat1" id="11"></div>
+                          <div class="seat1" id="12"></div>
+                          <div class="seat1 occupied1" id="13"></div>
+                          <div class="seat1" id="14"></div>
+                          <div class="seat1" id="15"></div>
+                          <div class="seat1" id="16"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="17"></div>
+                          <div class="seat1" id="18"></div>
+                          <div class="seat1" id="19"></div>
+                          <div class="seat1" id="20"></div>
+                          <div class="seat1" id="21"></div>
+                          <div class="seat1" id="22"></div>
+                          <div class="seat1 occupied" id="23"></div>
+                          <div class="seat1 occupied" id="24"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="25"></div>
+                          <div class="seat1" id="26"></div>
+                          <div class="seat1" id="27"></div>
+                          <div class="seat1" id="28"></div>
+                          <div class="seat1" id="29"></div>
+                          <div class="seat1" id="30"></div>
+                          <div class="seat1" id="31"></div>
+                          <div class="seat1" id="32"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="33"></div>
+                          <div class="seat1" id="34"></div>
+                          <div class="seat1" id="35"></div>
+                          <div class="seat1 occupied" id="36"></div>
+                          <div class="seat1 occupied" id="37"></div>
+                          <div class="seat1" id="38"></div>
+                          <div class="seat1" id="39"></div>
+                          <div class="seat1" id="40"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="41"></div>
+                          <div class="seat1" id="42"></div>
+                          <div class="seat1" id="43"></div>
+                          <div class="seat1" id="44"></div>
+                          <div class="seat1" id="45"></div>
+                          <div class="seat1" id="46"></div>
+                          <div class="seat1" id="47"></div>
+                          <div class="seat1" id="48"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="49"></div>
+                          <div class="seat1" id="50"></div>
+                          <div class="seat1" id="51"></div>
+                          <div class="seat1" id="52"></div>
+                          <div class="seat1 occupied" id="53"></div>
+                          <div class="seat1 occupied" id="54"></div>
+                          <div class="seat1 occupied" id="55"></div>
+                          <div class="seat1" id="56"></div>
+
+                        </div>
+                        <h5 class='subtitle'>Standard - £10.50</h5>
+
+                        <div class="text-wrapper">
+                          <p class="text">Selected seats <span id='count1'>0</span>
+                          <p class="text">Total Price £<span id="total1">0</span></p>
+                        </div>
+                      </div>
+
+                      <div class="input-group" style="padding-top: 10px;">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="">Name</span>
+                        </div>
+                        <input type="text" class="form-control" id="nameInput1">
+                      </div>
+
+                      <div style="padding-bottom: 20px; padding-top: 10px;">
+                        <button type="button" class="btn btn-secondary" onclick="createBooking1()">Book Now</button>
+                      </div>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                      <script src="/scripts/booking-starwars.js"></script>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
             <br><br>
           </div>
       </section>
