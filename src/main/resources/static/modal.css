@@ -40,6 +40,17 @@
   .row-container2 {
     margin-top: 30px;
   }
+
+  .container3 {
+    /*  it simply enables a 3D-space for children elements. */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .row-container3 {
+    margin-top: 30px;
+  }
   
   
   .seat1 {
@@ -58,6 +69,21 @@
   }
 
   .seat2 {
+    background-color: #444451;
+    height: 12px;
+    width: 15px;
+    margin: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  
+    height: 30px;
+    width: 35px;
+    background: #01163e;
+    border: 2px solid #314c81;
+    transition: all .2s ease;
+  }
+
+  .seat3 {
     background-color: #444451;
     height: 12px;
     width: 15px;
@@ -129,6 +155,34 @@
     cursor: default;
     transform: scale(1);
   }
+
+  .seat3.selected3 {
+    background-color: #6feaf6;
+    background-color: #31d7a9;
+  }
+  
+  .seat3.occupied3 {
+    background-color: #fff;
+  }
+  
+  .seat3:nth-of-type(2) {
+    margin-right: 18px;
+  }
+  
+  .seat3:nth-last-of-type(2) {
+    margin-left: 18px;
+  }
+  
+  .seat3:not(.occupied3):hover {
+    /* Selecting seats that do not have "occupied" class */
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+  
+  .showcase .seat3:not(.occupied3):hover {
+    cursor: default;
+    transform: scale(1);
+  }
   
   .showcase {
     background-color: rgba(0, 0, 0, 0.1);
@@ -156,6 +210,10 @@
   }
 
   .row2 {
+    display: flex;
+  }
+
+  .row3 {
     display: flex;
   }
   
@@ -235,6 +293,12 @@
     font-size: 24px;
     padding: 0 8px;
   }
+
+  #count3,
+  #total3 {
+    font-size: 24px;
+    padding: 0 8px;
+  }
   
   .text-wrapper {
     margin-top: 10px;
@@ -256,6 +320,11 @@
     }
 
     .seat2 {
+        height: 21px;
+        width: 23px;
+    }
+
+    .seat3 {
         height: 21px;
         width: 23px;
     }
@@ -284,6 +353,14 @@
     .seat2:nth-last-of-type(2) {
         margin-left: 12px;
     }
+
+    .seat3:nth-of-type(2) {
+        margin-right: 12px;
+    }
+  
+    .seat3:nth-last-of-type(2) {
+        margin-left: 12px;
+    }
   
     .movie-screen {
         margin-top: 25px;
@@ -302,6 +379,11 @@
     
     #count2,
     #total2 {
+        font-size: 18px
+    }
+
+    #count3,
+    #total3 {
         font-size: 18px
     }
   }
