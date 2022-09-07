@@ -11,7 +11,7 @@ Scroll to the bottom of the page leaving the rest untouched and click launch ins
 
 Yuo will need to to click into the instance and copy the ip address.
 Open the commmand terminal and navigate to the directory where you saved the Key pair file.
-Type the following to connect to the instace you have just created. ssh -i "your Key pari file" Ubtuntu @ "EC2 IP address"   
+Type the following to connect to the instance you have just created. ssh -i "your Key pari file" Ubtuntu @ "EC2 IP address"   
 Then follow the on-screen commands and you will have succefully login into your EC2 instance.
 
 You will then need to repeat this process to allow you to create a seperate instance for you to host your Jenkins.
