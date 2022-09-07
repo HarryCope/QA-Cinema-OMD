@@ -3,7 +3,6 @@ const bookingUrl = "http://localhost:8081/Booking";
 
 let filmTime = document.getElementById('movie1');
 
-let newBookingSeat = document
 let newBookingName = document.getElementById('nameInput1');
 let newBookingTime = filmTime.options[filmTime.selectedIndex].text;
 let newBookingPrice = document.getElementById('total1');
