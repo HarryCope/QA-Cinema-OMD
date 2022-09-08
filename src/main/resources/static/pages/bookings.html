@@ -16,8 +16,10 @@
 
             <!-- Compiled and minified JavaScript -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
     </head>
     <body class="main-body">
+
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a class="navbar-brand" href="/index.html"><img src="/images/logos/QA-Cinema-Logo.png" style="height:60px; width:100px;"></a>
             <div class="container-fluid">
@@ -62,7 +64,51 @@
             </div>
           </nav>
 
-       
+          <div class="col-6 col-lg-12">
+            <button style="margin-top: 10%;"   type="button" class="update-button" data-bs-toggle="modal"
+                data-bs-target="#updateBookingModal">Update Booking</button>
+    
+            <div class="modal fade" id="updateBookingModal" tabindex="-1" aria-labelledby="bookingModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="bookingModalLabel" style="color: black;">Update Booking</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <form>
+                                    <label for="updatedBookingId" class="form-label mt-2" style="color: black;">Booking Id to be updated</label>
+                                    <input type="text" class="form-control" id="updatedBookingId">
+                                    <label for="updatedBookingName" class="form-label mt-2" style="color: black;">New Name</label>
+                                    <input type="text" class="form-control" id="updatedBookingName">
+                                    <label for="updatedBookingTime" class="form-label mt-2" style="color: black;">New Time</label>
+                                    <input type="text" class="form-control" id="updatedBookingTime">
+                                    <label for="updatedBookingFilmId" class="form-label mt-2" style="color: black;">New Film Id</label>
+                                    <input type="text" class="form-control" id="updatedBookingFilmId">
+                                    <label for="updatedBookingSeatNumber" class="form-label mt-2" style="color: black;">New Seat Number</label>
+                                    <input type="text" class="form-control" id="updatedBookingSeatNumber">
+                                    <label for="updatedBookingScreen" class="form-label mt-2" style="color: black;">New Screen</label>
+                                    <input type="text" class="form-control" id="updatedBookingScreen">
+                                    <label for="updatedBookingPrice" class="form-label mt-2" style="color: black;">New Price</label>
+                                    <input type="text" class="form-control" id="updatedBookingPrice">
+                                    
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary"
+                                data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="updateBooking()"
+                                data-bs-dismiss="modal">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
 
           <div id="bookingDataList" style="padding-top: 40px; padding-left: 500px; padding-right: 500px;font-size: 25px;"></div>
           
@@ -138,8 +184,8 @@
           </div>
       <!-- Option 1: Bootstrap Bundle with Popper -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-      <script src="/scripts/booking.js"></script>
+      
   </body>
   
-  
+  <script src="/scripts/booking.js"></script>
 </html>

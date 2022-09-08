@@ -1,8 +1,14 @@
 const bookingUrlBook = "http://localhost:8081/Booking";
 let bookingID;
-const editBookingName = document.getElementById('');
-const editBookingTime = document.getElementById('');
+const editBookingName = document.getElementById('updatedBookingName');
+const editBookingTime = document.getElementById('updatedBookingTime');
+const editBookingSelect = document.getElementById('updatedBookingId');
 
+const editBookingFilmId = document.getElementById('updatedBookingFilmId');
+const editBookingSeatNumber = document.getElementById('updatedBookingSeatNumber');
+const editBookingScreen = document.getElementById('updatedBookingScreen');
+const editBookingPrice = document.getElementById('updatedBookingPrice');
+console.log(editBookingSelect)
 
 fetch(`${bookingUrlBook}/getBooking`)
         .then(function (response) {
@@ -19,81 +25,10 @@ fetch(`${bookingUrlBook}/getBooking`)
             for (let i = 0; i < bookingData1.length; i++) {
                 let div = document.createElement("div");
                 div.innerHTML = '<div style="padding-top:40px;"> Booking ID: ' + bookingData1[i].booking_Id +' </div><div>Film ID: ' + bookingData1[i].film_Id + '</div>' + ' Seat Numbers: ' + bookingData1[i].bookingSeatNumber + ' <div>Name: ' + bookingData1[i].bookingName + '</div>' + ' Screen Number: ' + bookingData1[i].bookingScreen + '  &nbsp &nbspBooking Time: ' 
-                + bookingData1[i].bookingTime + '<div> Price: £' + bookingData1[i].bookingPrice + '</div> <div style="padding-bottom:20px;"><button data-bs-toggle="modal" data-bs-target="#updateBookingModal" onclick="updateBooking(this.value)" value="' + bookingData1[i].booking_Id + '" id="update' + bookingData1[i].booking_Id + 
-                '" type="button" class="btn btn-secondary">Update</button> <button  onclick="deleteBooking(this.value)" value="' + bookingData1[i].booking_Id + '" id="delete' + bookingData1[i].booking_Id + '" type="button" class="btn btn-secondary">Delete</button></div>';
-                `<div class="col-6 col-lg-12">
-                    <div class="modal fade" id="updateBookingModal" tabindex="-1" aria-labelledby="bookingModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="bookingModalLabel" style="color: black;">Update Booking</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="container-fluid">
-                                        <form>
-                                            <label for="updatedBookingName" class="form-label mt-2" style="color: black;">New Name</label>
-                                            <input type="text" class="form-control" id="updatedPokemonName">
-                                            <label for="updatedBookingTime" class="form-label mt-2" style="color: black;">New Time</label>
-                                            <input type="text" class="form-control" id="updatedPokemonName">
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary" id=" " onclick="updateBooking()"
-                                        data-bs-dismiss="modal">Update</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    </div>`
+                + bookingData1[i].bookingTime + '<div> Price: £' + bookingData1[i].bookingPrice + '</div> <div style="padding-bottom:20px;"> <button  onclick="deleteBooking(this.value)" value="' + bookingData1[i].booking_Id + '" id="delete' + bookingData1[i].booking_Id + '" type="button" class="btn btn-secondary">Delete</button></div>';
                 mainContainer.appendChild(div);
-
             }
-            
-}
-
-`<div class="col-6 col-lg-12">
-
-
-<div class="modal fade" id="updateBookingModal" tabindex="-1" aria-labelledby="bookingModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="bookingModalLabel" style="color: black;">Update Booking</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <form>
-                        <label for="updatedBookingName" class="form-label mt-2" style="color: black;">New Name</label>
-                        <input type="text" class="form-control" id="updatedPokemonName">
-                        <label for="updatedBookingTime" class="form-label mt-2" style="color: black;">New Time</label>
-                        <input type="text" class="form-control" id="updatedPokemonName">
-                    </form>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-secondary"
-                    data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id=" " onclick="updateBooking()"
-                    data-bs-dismiss="modal">Update</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-</div>`
-
-
-
+        }
 
 const deleteBooking = (val) => {
     let bookingID = val;
@@ -110,17 +45,26 @@ const deleteBooking = (val) => {
     .catch(err => console.error(`error ${err}`));
 }
 
-const updateBooking = (val) => {
-    let bookingID = val;
-    const editBookingName = editBookingName.value;
-    const editBookingTime = editBookingTime.value;
+const updateBooking = () => {
+    
+    const editBookingSelectId = editBookingSelect.value;
+    const updateFilmBookingId = editBookingFilmId.value;
+    const updateBookingSeatNumber = editBookingSeatNumber.value;
+    const updateBookingName = editBookingName.value;
+    const updateBookingScreen = editBookingScreen.value;
+    const updateBookingTime = editBookingTime.value;
+    const updateBookingPrice = editBookingPrice.value;
 
     let bookingData1 = {
-        "bookingName": editBookingName,
-        "bookingTime": editBookingTime,
+        "film_Id": updateFilmBookingId,
+        "bookingSeatNumber": updateBookingSeatNumber,
+        "bookingName": updateBookingName,
+        "bookingScreen": updateBookingScreen,
+        "bookingTime": updateBookingTime,
+        "bookingPrice": updateBookingPrice
     }
 
-    fetch(`${bookingUrlBook}/updateBooking/${bookingID}`, {
+    fetch(`${bookingUrlBook}/updateBooking/${editBookingSelectId}`, {
         method: "PUT",
         body: JSON.stringify(bookingData1),
         headers: {
@@ -134,3 +78,31 @@ const updateBooking = (val) => {
         .catch(err => console.error(`error ${err}`));
 };
 
+const updatePokemon = () => {
+    const editPokemonId = editPokemonSelect.value;
+    const editPokemonName = editPokemonName.value;
+    const editPokemonType = editPokemonType.value;
+    const editPokemonLevel = editPokemonLevel.value;
+    const editPokemonHeldItem = editPokemonHeldItem.value;
+
+    let data = {
+        "name": editPokemonName,
+        "type": editPokemonType,
+        "level": editPokemonLevel,
+        "heldItem": editPokemonHeldItem
+    }
+
+    fetch(`${pokeUrl}/updatePokemon/${editPokemonId}`, {
+        method: "PUT",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+        .then(response => response.json())
+        .then(model => {
+            console.log(model)
+            refresh();
+        })
+        .catch(err => console.error(`error ${err}`));
+};
