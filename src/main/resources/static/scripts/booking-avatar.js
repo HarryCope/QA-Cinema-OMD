@@ -1,21 +1,21 @@
 const bookingUrl = "http://localhost:8081/Booking";
 //let total1 = document.getElementById("total1");
 
-let filmTime = document.getElementById('movie1');
+let filmTime = document.getElementById('movie4');
 
-let newBookingName = document.getElementById('nameInput1');
+let newBookingName = document.getElementById('nameInput4');
 let newBookingTime = filmTime.options[filmTime.selectedIndex].text;
-let newBookingPrice = document.getElementById('total1');
+let newBookingPrice = document.getElementById('total4');
 
 
-function bookingFunction1() {
+function bookingFunction4() {
     
-    const seats = document.querySelectorAll(".row1 .seat1:not(.occupied1)");
-    const seatContainer = document.querySelector(".row-container1");
+    const seats = document.querySelectorAll(".row4 .seat4:not(.occupied4)");
+    const seatContainer = document.querySelector(".row-container4");
 
-    const count1 = document.getElementById("count1");
+    const count1 = document.getElementById("count4");
    
-    const movieSelect1 = document.getElementById("movie1");
+    const movieSelect1 = document.getElementById("movie4");
 
     populateUI();
 
@@ -29,7 +29,7 @@ function bookingFunction1() {
     }
 
     function updateSelectedCount() {
-    const selectedSeats = document.querySelectorAll(".container1 .selected1");
+    const selectedSeats = document.querySelectorAll(".container4 .selected4");
 
     seatsIndex = [...selectedSeats].map(function(seat) {
         return [...seats].indexOf(seat);
@@ -49,7 +49,7 @@ function bookingFunction1() {
     if (selectedSeats !== null && selectedSeats.length > 0) {
         seats.forEach(function(seat, index) {
         if (selectedSeats.indexOf(index) > -1) {
-            seat.classList.add("selected1");
+            seat.classList.add("selected4");
         }
         });
     }
@@ -73,10 +73,10 @@ function bookingFunction1() {
 
     seatContainer.addEventListener("click", function(e) {
     if (
-        e.target.classList.contains("seat1") &&
-        !e.target.classList.contains("occupied1")
+        e.target.classList.contains("seat4") &&
+        !e.target.classList.contains("occupied4")
     ) {
-        e.target.classList.toggle("selected1");
+        e.target.classList.toggle("selected4");
         updateSelectedCount();
     }
     });
@@ -85,7 +85,7 @@ function bookingFunction1() {
     updateSelectedCount();
 }
 
-const createBooking1 = () => {
+const createBooking4 = () => {
         //let newBookingSeatCreate = newBookingSeat.value;
         let newBookingNameCreate = newBookingName.value;
         let newBookingTimeCreate = newBookingTime;
@@ -94,10 +94,10 @@ const createBooking1 = () => {
         console.log(newBookingTimeCreate);
       
         let bookingData1 = {
-            "film_Id": "1",
+            "film_Id": "4",
             "bookingSeatNumber": JSON.stringify(seatsIndex),
             "bookingName": newBookingNameCreate,
-            "bookingScreen":"1",
+            "bookingScreen":"4",
             "bookingTime": newBookingTimeCreate,
             "bookingPrice": newBookingPriceCreate
         }
