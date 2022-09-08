@@ -4,7 +4,7 @@ Trello Board https://trello.com/b/C2NJ1zi0/one-man-down-qa-cinema
 
 ### QA Cinema
 
-In this project we were given the task to create a Spring/JS-based Web application suitable for a given client specification
+In this project we were given the task to create a Spring/JS-based Web application suitable for a given client specification with a CI/CD pipeline that deploys to the cloud
 
 ### Prerequisites
 
