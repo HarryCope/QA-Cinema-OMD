@@ -2,11 +2,11 @@ Coverage 80.3%
 
 Trello Board https://trello.com/b/C2NJ1zi0/one-man-down-qa-cinema
 
-QA Cinema
+### QA Cinema
 
 In this project we were given the task to create a Spring/JS-based Web application suitable for a given client specification
 
-Prerequisites
+### Prerequisites
 
 You a Java IDE Eclipse was used for this program and MySQL for the database control. Maven will also need to be intalled in order to package the file. The front end HTML, CSS and JavaScript are embedded in the Eclipse code but to edit them  VSCode would be recommended for this.
 
@@ -23,19 +23,22 @@ To install Mysql
 Then go to https://dev.mysql.com/downloads/workbench/ and download the latest version.
 ```
 Open the download and run the install wizard, once completed open MySql
-
+```
 To install Visual Studio Code
 
 Then go to https://code.visualstudio.com/download and download the latest version.
 ```
 Open the download and run the install wizard, once completed open Visual Studio Code.
+```
 
+### Future plans
 
-Future projects
+To add a payment feature on the website which could link to an external merchant to complete final payment.
 
-Jenkins IP
+### Jenkins IP
 http://18.130.150.90:8081/#
 
+### Setup
 Create an EC2 Instance
 
 Sign in to your AWS account, ensure that you are in the correct region (EU-west2)
