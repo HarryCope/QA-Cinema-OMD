@@ -35,14 +35,14 @@ public class BookingService {
 	}
 
 	// Update
-	public Booking updateBooking(Booking updateBooking, Long bookingId) {
+	public Booking updateBooking(Booking updateBooking, Long booking_Id) {
 
-		Optional<Booking> currentBooking = this.repo.findById(bookingId);
+		Optional<Booking> currentBooking = this.repo.findById(booking_Id);
 
 		if (currentBooking.get() instanceof Booking) {
 			Booking oldBooking = currentBooking.get();
 
-			oldBooking.setBooking_Id(updateBooking.getBooking_Id());
+			oldBooking.setBooking_Id(booking_Id);
 			oldBooking.setBookingName(updateBooking.getBookingName());
 			oldBooking.setBookingScreen(updateBooking.getBookingScreen());
 			oldBooking.setBookingSeatNumber(updateBooking.getBookingSeatNumber());
