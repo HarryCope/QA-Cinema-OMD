@@ -41,6 +41,7 @@ const deleteBooking = (val) => {
     .then(response => console.log(response))
     .then(() => {
         console.log("Delete successful");
+        window.location.reload();
     })
     .catch(err => console.error(`error ${err}`));
 }
@@ -74,6 +75,7 @@ const updateBooking = () => {
         .then(response => response.json())
         .then(model => {
             console.log(model)
+            window.location.reload();
         })
         .catch(err => console.error(`error ${err}`));
 };
