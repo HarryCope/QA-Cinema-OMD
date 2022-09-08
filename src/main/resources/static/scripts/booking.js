@@ -1,86 +1,79 @@
-const seats = document.querySelectorAll(".row .seat:not(.occupied)");
-const seatContainer = document.querySelector(".row-container");
-const count = document.getElementById("count");
-const total = document.getElementById("total");
-const movieSelect = document.getElementById("movie");
+const bookingUrlBook = "http://localhost:8081/Booking";
+let bookingID;
+const editBookingName = document.getElementById('updatedBookingName');
+const editBookingTime = document.getElementById('updatedBookingTime');
+const editBookingSelect = document.getElementById('updatedBookingId');
 
-// Another Approach
+const editBookingFilmId = document.getElementById('updatedBookingFilmId');
+const editBookingSeatNumber = document.getElementById('updatedBookingSeatNumber');
+const editBookingScreen = document.getElementById('updatedBookingScreen');
+const editBookingPrice = document.getElementById('updatedBookingPrice');
+console.log(editBookingSelect)
 
-// seats.forEach(function(seat) {
-//   seat.addEventListener("click", function(e) {
-//     seat.classList.add("selected");
-//     const selectedSeats = document.querySelectorAll(".container .selected");
-//     selectedSeathLength = selectedSeats.length;
-//     count.textContent = selectedSeathLength;
-//     let ticketPrice = +movieSelect.value;
-//     total.textContent = ticketPrice * selectedSeathLength;
-//   });
-// });
+fetch(`${bookingUrlBook}/getBooking`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (bookingData1) {
+            appendData(bookingData1);
+        })
+        .catch(function (err) {
+            console.log('error: ' + err);
+        });
+        function appendData(bookingData1) {
+            let mainContainer = document.getElementById("bookingDataList");
+            for (let i = 0; i < bookingData1.length; i++) {
+                let div = document.createElement("div");
+                div.innerHTML = '<div style="padding-top:40px;"> Booking ID: ' + bookingData1[i].booking_Id +' </div><div>Film ID: ' + bookingData1[i].film_Id + '</div>' + ' Seat Numbers: ' + bookingData1[i].bookingSeatNumber + ' <div>Name: ' + bookingData1[i].bookingName + '</div>' + ' Screen Number: ' + bookingData1[i].bookingScreen + '  &nbsp &nbspBooking Time: ' 
+                + bookingData1[i].bookingTime + '<div> Price: £' + bookingData1[i].bookingPrice + '</div> <div style="padding-bottom:20px;"> <button  onclick="deleteBooking(this.value)" value="' + bookingData1[i].booking_Id + '" id="delete' + bookingData1[i].booking_Id + '" type="button" class="btn btn-secondary">Delete</button></div>';
+                mainContainer.appendChild(div);
+            }
+        }
 
-// localStorage.clear();
-
-populateUI();
-
-let ticketPrice = +movieSelect.value;
-
-// Save selected movie index and price
-function setMovieData(movieIndex, moviePrice) {
-  localStorage.setItem("selectedMovieIndex", movieIndex);
-  localStorage.setItem("selectedMoviePrice", moviePrice);
+const deleteBooking = (val) => {
+    let bookingID = val;
+    fetch(`${bookingUrlBook}/deleteBooking/${bookingID}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(response => console.log(response))
+    .then(() => {
+        console.log("Delete successful");
+    })
+    .catch(err => console.error(`error ${err}`));
 }
 
-function updateSelectedCount() {
-  const selectedSeats = document.querySelectorAll(".container .selected");
+const updateBooking = () => {
+    
+    const editBookingSelectId = editBookingSelect.value;
+    const updateFilmBookingId = editBookingFilmId.value;
+    const updateBookingSeatNumber = editBookingSeatNumber.value;
+    const updateBookingName = editBookingName.value;
+    const updateBookingScreen = editBookingScreen.value;
+    const updateBookingTime = editBookingTime.value;
+    const updateBookingPrice = editBookingPrice.value;
 
-  seatsIndex = [...selectedSeats].map(function(seat) {
-    return [...seats].indexOf(seat);
-  });
+    let bookingData1 = {
+        "film_Id": updateFilmBookingId,
+        "bookingSeatNumber": updateBookingSeatNumber,
+        "bookingName": updateBookingName,
+        "bookingScreen": updateBookingScreen,
+        "bookingTime": updateBookingTime,
+        "bookingPrice": updateBookingPrice
+    }
 
-  localStorage.setItem("selectedSeats", JSON.stringify(seatsIndex));
-
-  let selectedSeatsCount = selectedSeats.length;
-  count.textContent = selectedSeatsCount;
-  total.textContent = selectedSeatsCount * ticketPrice;
-}
-
-// Get data from localstorage and populate
-function populateUI() {
-  const selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
-
-  if (selectedSeats !== null && selectedSeats.length > 0) {
-    seats.forEach(function(seat, index) {
-      if (selectedSeats.indexOf(index) > -1) {
-        seat.classList.add("selected");
-      }
-    });
-  }
-
-  const selectedMovieIndex = localStorage.getItem("selectedMovieIndex");
-
-  if (selectedMovieIndex !== null) {
-    movieSelect.selectedIndex = selectedMovieIndex;
-  }
-}
-
-// Movie select event
-
-movieSelect.addEventListener("change", function(e) {
-  ticketPrice = +movieSelect.value;
-  setMovieData(e.target.selectedIndex, e.target.value);
-  updateSelectedCount();
-});
-
-// Adding selected class to only non-occupied seats on 'click'
-
-seatContainer.addEventListener("click", function(e) {
-  if (
-    e.target.classList.contains("seat") &&
-    !e.target.classList.contains("occupied")
-  ) {
-    e.target.classList.toggle("selected");
-    updateSelectedCount();
-  }
-});
-
-// Initial count and total rendering
-updateSelectedCount();
+    fetch(`${bookingUrlBook}/updateBooking/${editBookingSelectId}`, {
+        method: "PUT",
+        body: JSON.stringify(bookingData1),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+        .then(response => response.json())
+        .then(model => {
+            console.log(model)
+        })
+        .catch(err => console.error(`error ${err}`));
+};

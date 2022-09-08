@@ -1,0 +1,43 @@
+{
+    "filmName":"Beast",
+    "filmRating":"5.9/10",
+    "filmReleaseDate":"26 August 2022",
+    "filmAgeRating":"15",
+    "filmSynopsis":"A father and his two teenage daughters find themselves hunted by a massive rogue lion intent on proving that the Savanna has but one apex predator.",
+    "filmCast":["Idris Elba","Leah Jeffries","Iyana Halley"],
+    "filmDirectors":["Baltasar Kormákur"],
+    "filmGenres":["Horror", "Adventure", "Drama"]
+}
+
+{
+    "filmName":"Bullet Train",
+    "filmRating":"7.5/10",
+    "filmReleaseDate":"3 August 2022",
+    "filmAgeRating":"15",
+    "filmSynopsis":"Five assassins aboard a fast moving bullet train find out their missions have something in common.",
+    "filmCast":["Brad Pitt","Joey King","Aaron Taylor-Johnson"],
+    "filmDirectors":["David Leitch"],
+    "filmGenres":["Action", "Comedy", "Thriller"]
+}
+
+{
+    "filmName":"Nope",
+    "filmRating":"7.0/10",
+    "filmReleaseDate":"12 August 2022",
+    "filmAgeRating":"15",
+    "filmSynopsis":"Two siblings who run a California horse ranch discover something wonderful and sinister in the skies above, and the owner of an adjacent theme park tries to profit from the mysterious, otherworldly phenomenon.",
+    "filmCast":["Daniel Kaluuya","Keke Palmer","Steven Yeun"],
+    "filmDirectors":["Jordan Peele"],
+    "filmGenres":["Action", "Comedy", "Thriller"]
+}
+
+{
+    "filmName":"Minions: The Rise Of Gru",
+    "filmRating":"7.0/10",
+    "filmReleaseDate":"12 August 2022",
+    "filmAgeRating":"U",
+    "filmSynopsis":"Two siblings who run a California horse ranch discover something wonderful and sinister in the skies above, and the owner of an adjacent theme park tries to profit from the mysterious, otherworldly phenomenon.",
+    "filmCast":["Daniel Kaluuya","Keke Palmer","Steven Yeun"],
+    "filmDirectors":["Jordan Peele"],
+    "filmGenres":["Action", "Comedy", "Thriller"]
+}

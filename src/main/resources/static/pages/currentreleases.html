@@ -10,8 +10,10 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">    
             <title>QA Cinema - Current Releases</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-            <link rel="stylesheet" href="/styles/CurrentReleases.css">
+
+            <link rel="stylesheet" href="/styles\CurrentReleases.css">
+            <link rel="stylesheet" href="/modal.css">
+
 
             <!-- Compiled and minified JavaScript -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -31,14 +33,26 @@
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="/pages/bookings.html">Bookings</a>
               </li>
-              <li class="nav-item"> 
-                <a class="nav-link" aria-current="page" href="./bookings.html">Events</a>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/pages\ContactUs.html">Contact Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/pages/discussionBoard.html">Discussion Board</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/pages/about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/gettingthere.html">Getting There</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/PlacesToGo.html">Places To Go</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/Classifications.html">Classifications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages\Screens.html">Screens</a>
               </li>
             </ul>
             <form class="d-flex">
@@ -49,277 +63,406 @@
         </div>
       </nav>
         
-      <br>
-
-        <h1>Put Carousel of current films</h1>
-       
-      <br>
-      <br>
-     
-  
-      </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+      <section class="banner">
+        <div class="container">
+          <img src="image/logo.png" class="logo-top">
+          <div class="content-container">
+            <span class="rating">4.8/5</span>
       
-      <div class="wrapper">
-        <div class="one">
-          <h3 class="card-header">Beast</h3>
-          <h5 class="card-title">Classifiaction: 15</h5>
-        </div>
-        <div class="two">
-          <img src="/images/posters/Beast.jpg" alt="Beast" width="480" height="545" class="center">
-        </div>
-        <div class="three">
-          <br>
-          <br>
-          <p class="card-text">Idris Elba (Fast & Furious Presents: Hobbs & Shaw, The Suicide Squad) stars in a pulse-pounding new thriller about a father and his two teenage daughters who find themselves hunted by a massive rogue lion intent on proving that the savannah has but one apex predator.
+            <h1 class="title">Spiderman: No Way Home</h1>
+            <a href="" class="an">Action Sci-fi</a>
+            <a href="" class="an">2 September 2022</a>
+            <a href="" class="an">2h 37m</a>
+            <a href="" class="an">Jon Watts</a>
+            <p class="an" style="padding-top: 10px;">Tom Holland &nbsp &nbsp Zendaya &nbsp &nbsp Marisa Tomei</p>
+            <p class="des">For the first time in the cinematic history of Spider-Man, our friendly neighbourhood hero is unmasked and no longer able to separate his normal life from the high-stakes of being a Super Hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.</p>
+            <button class="read-more"data-bs-toggle="modal" data-bs-target="#exampleModal1">Book Now</button>
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+              aria-hidden="true">
+              <div class="modal-dialog">
 
-            Elba plays Dr. Nate Samuels, a recently widowed husband who returns to South Africa, where he first met his wife, on a long-planned trip with their daughters to a game reserve managed by Martin Battles (Sharlto Copley, Russian Doll series, Maleficent), an old family friend and wildlife biologist. But what begins as a journey of healing jolts into a fearsome fight for survival when a lion, a survivor of blood-thirsty poachers who now sees all humans as the enemy, begins stalking them.</p>
-        </div>
-        <div class="four">
-          Starring: Idris Elba, Sharlto Copley, Iyana Halley, SLeah Sava Jefferies
-        </div>
-        <div class="five">
-          <div class="card-body">
-            <a href="./bookings.html" class="card-link">10:45</a>
-            <a href="./bookings.html" class="card-link">11:15</a>
-            <a href="./bookings.html" class="card-link">11:45</a>
-            <a href="./bookings.html" class="card-link">12:15</a>
-            <a href="./bookings.html" class="card-link">12:45</a>
-            <a href="./bookings.html" class="card-link">13:15</a>
-            <a href="./bookings.html" class="card-link">13:45</a>
-          </div>
-        </div>
-        <div class="six">
-            <li class="list-group-item">Running time: 1hr 33mins</li>
-            <li class="list-group-item">Today Thursday 1st September</li>
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Book Your Seats</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div class="movie-container">
+                      <label>Pick a time:</label>
+                      <select id="movie1">
+                        <option value="10.50">14:00</option>
+                        <option value="10.50">16:00</option>
+                        <option value="10.50">18:00</option>
+                        <option value="10.50">20:00</option>
+                      </select>
+                    </div>
+
+                    <ul class="showcase">
+                      <li>
+                        <div class="seat1"></div>
+                        <small>N/A</small>
+                      </li>
+                      <li>
+                        <div class="seat1 selected1"></div>
+                        <small>Selected</small>
+                      </li>
+                      <li>
+                        <div class="seat1 occupied1"></div>
+                        <small>Occupied</small>
+                      </li>
+                    </ul>
+
+                    <div class="container1">
+                      <div class="movie-screen">
+                        <img src='/images/posters/screen.png' alt='screen' />
+                      </div>
+
+                      <div class="row-container1">
+                        <div class="row1">
+                          <div class="seat1" id="1"></div>
+                          <div class="seat1" id="2"></div>
+                          <div class="seat1" id="3"></div>
+                          <div class="seat1" id="4"></div>
+                          <div class="seat1" id="5"></div>
+                          <div class="seat1" id="6"></div>
+                          <div class="seat1" id="7"></div>
+                          <div class="seat1" id="8"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="9"></div>
+                          <div class="seat1" id="10"></div>
+                          <div class="seat1" id="11"></div>
+                          <div class="seat1" id="12"></div>
+                          <div class="seat1 occupied1" id="13"></div>
+                          <div class="seat1" id="14"></div>
+                          <div class="seat1" id="15"></div>
+                          <div class="seat1" id="16"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="17"></div>
+                          <div class="seat1" id="18"></div>
+                          <div class="seat1" id="19"></div>
+                          <div class="seat1" id="20"></div>
+                          <div class="seat1" id="21"></div>
+                          <div class="seat1" id="22"></div>
+                          <div class="seat1 occupied" id="23"></div>
+                          <div class="seat1 occupied" id="24"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="25"></div>
+                          <div class="seat1" id="26"></div>
+                          <div class="seat1" id="27"></div>
+                          <div class="seat1" id="28"></div>
+                          <div class="seat1" id="29"></div>
+                          <div class="seat1" id="30"></div>
+                          <div class="seat1" id="31"></div>
+                          <div class="seat1" id="32"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="33"></div>
+                          <div class="seat1" id="34"></div>
+                          <div class="seat1" id="35"></div>
+                          <div class="seat1 occupied" id="36"></div>
+                          <div class="seat1 occupied" id="37"></div>
+                          <div class="seat1" id="38"></div>
+                          <div class="seat1" id="39"></div>
+                          <div class="seat1" id="40"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="41"></div>
+                          <div class="seat1" id="42"></div>
+                          <div class="seat1" id="43"></div>
+                          <div class="seat1" id="44"></div>
+                          <div class="seat1" id="45"></div>
+                          <div class="seat1" id="46"></div>
+                          <div class="seat1" id="47"></div>
+                          <div class="seat1" id="48"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="49"></div>
+                          <div class="seat1" id="50"></div>
+                          <div class="seat1" id="51"></div>
+                          <div class="seat1" id="52"></div>
+                          <div class="seat1 occupied" id="53"></div>
+                          <div class="seat1 occupied" id="54"></div>
+                          <div class="seat1 occupied" id="55"></div>
+                          <div class="seat1" id="56"></div>
+
+                        </div>
+                        <h5 class='subtitle'>Standard - £10.50</h5>
+
+                        <div class="text-wrapper">
+                          <p class="text">Selected seats <span id='count1'>0</span>
+                          <p class="text">Total Price £<span id="total1">0</span></p>
+                        </div>
+                      </div>
+
+                      <div class="input-group" style="padding-top: 10px;">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="">Name</span>
+                        </div>
+                        <input type="text" class="form-control" id="nameInput1">
+                      </div>
+
+                      <div style="padding-bottom: 20px; padding-top: 10px;">
+                        <button type="button" class="btn btn-secondary" onclick="createBooking1()">Book Now</button>
+                      </div>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                      <script src="/scripts/booking-starwars.js"></script>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+
+                </div>
+              </div>
             </div>
-      </div>
-      <br>
-      <br>
-      <br>
-      <div class="wrapper">
-        <div class="one">
-          <h3 class="card-header">Bullet Train</h3>
-          <h5 class="card-title">Classifiaction: 15</h5>
-        </div>
-        <div class="two">
-          <img src="/images/posters/BulletTrain.jpg" alt="Beast" width="480" height="545" class="center">
-        </div>
-        <div class="three">
-          <br>
-          <br>
-          <p class="card-text">Ladybug is an unlucky assassin who's determined to do his job peacefully after one too many gigs has gone off the rails. Fate, however, may have other plans as his latest mission puts him on a collision course with lethal adversaries from around the globe -- all with connected yet conflicting objectives -- on the world's fastest train.</p>
-        </div>
-        <div class="four">
-          Cast: Brad Pitt, Joey King, Aaron Taylor-Johnson, Brian Tyree Henry, Bad Bunny
-        </div>
-        <div class="five">
-          <div class="card-body">
-            <a href="./bookings.html" class="card-link">10:45</a>
-            <a href="./bookings.html" class="card-link">11:15</a>
-            <a href="./bookings.html" class="card-link">11:45</a>
-            <a href="./bookings.html" class="card-link">12:15</a>
-            <a href="./bookings.html" class="card-link">12:45</a>
-            <a href="./bookings.html" class="card-link">13:15</a>
-            <a href="./bookings.html" class="card-link">13:45</a>
           </div>
         </div>
-        <div class="six">
-          <li class="list-group-item">Running time: 1hr 33mins</li>
-          <li class="list-group-item">Today Thursday 1st September</li>
-        </div>
-      </div>
+      </section>
+      
+      
+      <section class="ban-2">
+        <div class="content-container-1">
+            <span class="rating">6.6</span>
+      
+            <h1 class="title">Minions: The Rise of Gru</h1>
+            <a href="" class="an">Comedy Adventure</a>
+            <a href="" class="an">1 July 2022</a>
+            <a href="" class="an">1h 27m</a>
+            <a href="" class="an">Kyle Balda</a>
+            <p class="an" style="padding-top: 10px;">Steve Carell &nbsp &nbsp Jean-Claude Van Damme &nbsp &nbsp Russell Brand</p>
+            <p class="des">The untold story of one twelve-year-old's dream to become the world's greatest supervillain.</p>
+            <button class="read-more" data-bs-toggle="modal" data-bs-target="#exampleModal2">Book Now</button>
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+              aria-hidden="true">
+              <div class="modal-dialog">
 
-      <br>
-      <br>
-      <br>
-      <div class="wrapper">
-        <div class="one">
-          <h3 class="card-header">Nope</h3>
-          <h5 class="card-title">Classifiaction: 15</h5>
-        </div>
-        <div class="two">
-          <img src="/images/posters/Nope.jpg" alt="Beast" width="480" height="545" class="center">
-        </div>
-        <div class="three">
-          <br>
-          <br>
-          <p class="card-text">Two siblings running a horse ranch in California discover something wonderful and sinister in the skies above, while the owner of an adjacent theme park tries to profit from the mysterious, otherworldly phenomenon.</p>
-        </div>
-        <div class="four">
-          Cast: Keke Palmer, Daniel Kaluuya, Steven Yeun, Brandon Perea, Barbie Ferreira, Michael Wincott, Keith David
-        </div>
-        <div class="five">
-          <div class="card-body">
-            <a href="./bookings.html" class="card-link">10:45</a>
-            <a href="./bookings.html" class="card-link">11:15</a>
-            <a href="./bookings.html" class="card-link">11:45</a>
-            <a href="./bookings.html" class="card-link">12:15</a>
-            <a href="./bookings.html" class="card-link">12:45</a>
-            <a href="./bookings.html" class="card-link">13:15</a>
-            <a href="./bookings.html" class="card-link">13:45</a>
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel2">Book Your Seats</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div class="movie-container">
+                      <label>Pick a time:</label>
+                      <select id="movie1">
+                        <option value="10.50">14:00</option>
+                        <option value="10.50">16:00</option>
+                        <option value="10.50">18:00</option>
+                        <option value="10.50">20:00</option>
+                      </select>
+                    </div>
+
+                    <ul class="showcase">
+                      <li>
+                        <div class="seat1"></div>
+                        <small>N/A</small>
+                      </li>
+                      <li>
+                        <div class="seat1 selected1"></div>
+                        <small>Selected</small>
+                      </li>
+                      <li>
+                        <div class="seat1 occupied1"></div>
+                        <small>Occupied</small>
+                      </li>
+                    </ul>
+
+                    <div class="container1">
+                      <div class="movie-screen">
+                        <img src='/images/posters/screen.png' alt='screen' />
+                      </div>
+
+                      <div class="row-container1">
+                        <div class="row1">
+                          <div class="seat1" id="1"></div>
+                          <div class="seat1" id="2"></div>
+                          <div class="seat1" id="3"></div>
+                          <div class="seat1" id="4"></div>
+                          <div class="seat1" id="5"></div>
+                          <div class="seat1" id="6"></div>
+                          <div class="seat1" id="7"></div>
+                          <div class="seat1" id="8"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="9"></div>
+                          <div class="seat1" id="10"></div>
+                          <div class="seat1" id="11"></div>
+                          <div class="seat1" id="12"></div>
+                          <div class="seat1 occupied1" id="13"></div>
+                          <div class="seat1" id="14"></div>
+                          <div class="seat1" id="15"></div>
+                          <div class="seat1" id="16"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="17"></div>
+                          <div class="seat1" id="18"></div>
+                          <div class="seat1" id="19"></div>
+                          <div class="seat1" id="20"></div>
+                          <div class="seat1" id="21"></div>
+                          <div class="seat1" id="22"></div>
+                          <div class="seat1 occupied" id="23"></div>
+                          <div class="seat1 occupied" id="24"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="25"></div>
+                          <div class="seat1" id="26"></div>
+                          <div class="seat1" id="27"></div>
+                          <div class="seat1" id="28"></div>
+                          <div class="seat1" id="29"></div>
+                          <div class="seat1" id="30"></div>
+                          <div class="seat1" id="31"></div>
+                          <div class="seat1" id="32"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="33"></div>
+                          <div class="seat1" id="34"></div>
+                          <div class="seat1" id="35"></div>
+                          <div class="seat1 occupied" id="36"></div>
+                          <div class="seat1 occupied" id="37"></div>
+                          <div class="seat1" id="38"></div>
+                          <div class="seat1" id="39"></div>
+                          <div class="seat1" id="40"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="41"></div>
+                          <div class="seat1" id="42"></div>
+                          <div class="seat1" id="43"></div>
+                          <div class="seat1" id="44"></div>
+                          <div class="seat1" id="45"></div>
+                          <div class="seat1" id="46"></div>
+                          <div class="seat1" id="47"></div>
+                          <div class="seat1" id="48"></div>
+                        </div>
+                        <div class="row1">
+                          <div class="seat1" id="49"></div>
+                          <div class="seat1" id="50"></div>
+                          <div class="seat1" id="51"></div>
+                          <div class="seat1" id="52"></div>
+                          <div class="seat1 occupied" id="53"></div>
+                          <div class="seat1 occupied" id="54"></div>
+                          <div class="seat1 occupied" id="55"></div>
+                          <div class="seat1" id="56"></div>
+
+                        </div>
+                        <h5 class='subtitle'>Standard - £10.50</h5>
+
+                        <div class="text-wrapper">
+                          <p class="text">Selected seats <span id='count1'>0</span>
+                          <p class="text">Total Price £<span id="total1">0</span></p>
+                        </div>
+                      </div>
+
+                      <div class="input-group" style="padding-top: 10px;">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="">Name</span>
+                        </div>
+                        <input type="text" class="form-control" id="nameInput1">
+                      </div>
+
+                      <div style="padding-bottom: 20px; padding-top: 10px;">
+                        <button type="button" class="btn btn-secondary" onclick="createBooking1()">Book Now</button>
+                      </div>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                      <script src="/scripts/booking-starwars.js"></script>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
-        <div class="six">
-          <li class="list-group-item">Running time: 1hr 33mins</li>
-          <li class="list-group-item">Today Thursday 1st September</li>
-        </div>
-      </div>
-      <br>
-      <br>
-      <br>
-      <div class="wrapper">
-        <div class="one">
-          <h3 class="card-header">Minions: The Rise Of Gru</h3>
-          <h5 class="card-title">Classifiaction: U</h5>
-        </div>
-        <div class="two">
-          <img src="/images/posters/Minions.jpg" alt="Beast" width="480" height="545" class="center">
-        </div>
-        <div class="three">
-          <br>
-          <br>
-          <p class="card-text">In the 1970s, young Gru tries to join a group of supervillains called the Vicious 6 after they oust their leader -- the legendary fighter Wild Knuckles. When the interview turns disastrous, Gru and his Minions go on the run with the Vicious 6 hot on their tails. Luckily, he finds an unlikely source for guidance -- Wild Knuckles himself -- and soon discovers that even bad guys need a little help from their friends.</p>
-        </div>
-        <div class="four">
-         Cast: Bob, Stuart, Kevin. Steve Carell, Michelle Yeoh, Pierre Coffin, Taraji P. Henson, Julie Andrews, Russell Brand, Danny Trejo
-        </div>
-        <div class="five">
-          <div class="card-body">
-            <a href="./bookings.html" class="card-link">10:45</a>
-            <a href="./bookings.html" class="card-link">11:15</a>
-            <a href="./bookings.html" class="card-link">11:45</a>
-            <a href="./bookings.html" class="card-link">12:15</a>
-            <a href="./bookings.html" class="card-link">12:45</a>
-            <a href="./bookings.html" class="card-link">13:15</a>
-            <a href="./bookings.html" class="card-link">13:45</a>
+            <br><br>
           </div>
-        </div>
-        <div class="six">
-          <li class="list-group-item">Running time: 1hr 33mins</li>
-          <li class="list-group-item">Today Thursday 1st September</li>
-        </div>
-      </div>
-      <br>
-      <br>
-      <br>
-      <div class="wrapper">
-        <div class="one">
-          <h3 class="card-header">DC League Of Super Pets</h3>
-          <h5 class="card-title">Classifiaction: PG</h5>
-        </div>
-        <div class="two">
-          <img src="/images/posters/DCSuper.jpg" alt="Beast" width="480" height="545" class="center">
-        </div>
-        <div class="three">
-          <br>
-          <br>
-          <p class="card-text">Krypto the Super-Dog and Superman are inseparable best friends, sharing the same superpowers and fighting crime side by side in Metropolis. However, when the Man of Steel and the rest of the Justice League are kidnapped, Krypto must convince a ragtag group of animals to master their own newfound powers for a rescue mission.</p>
-        </div>
-        <div class="four">
-          Cast: Dwayne Johnson, Kevin Hart, Keanu Reeves, Kate McKinnon, John Krasinski, Ben Schwartz, Marc Maron, Natasha Lyonne
-        </div>
-        <div class="five">
-          <div class="card-body">
-            <a href="./bookings.html" class="card-link">10:45</a>
-            <a href="./bookings.html" class="card-link">11:15</a>
-            <a href="./bookings.html" class="card-link">11:45</a>
-            <a href="./bookings.html" class="card-link">12:15</a>
-            <a href="./bookings.html" class="card-link">12:45</a>
-            <a href="./bookings.html" class="card-link">13:15</a>
-            <a href="./bookings.html" class="card-link">13:45</a>
-          </div>
-        </div>
-        <div class="six">
-          <li class="list-group-item">Running time: 1hr 33mins</li>
-          <li class="list-group-item">Today Thursday 1st September</li>
-        </div>
-      </div>
-      <br>
-      <br>
-      <br>
-      <div class="wrapper">
-        <div class="one">
-          <h3 class="card-header">Thor: Love And Thunder</h3>
-          <h5 class="card-title">Classifiaction: 12A</h5>
-        </div>
-        <div class="two">
-          <img src="/images/posters/Thor.jpg" alt="Beast" width="480" height="545" class="center">
-        </div>
-        <div class="three">
-          <br>
-          <br>
-          <p class="card-text">Thor embarks on a journey unlike anything he's ever faced -- a quest for inner peace. However, his retirement gets interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods. To combat the threat, Thor enlists the help of King Valkyrie, Korg and ex-girlfriend Jane Foster, who -- to his surprise -- inexplicably wields his magical hammer. Together, they set out on a harrowing cosmic adventure to uncover the mystery of the God Butcher's vengeance.</p>
-        </div>
-        <div class="four">
-          Cast: Chris Hemsworth, Natalie Portman, Christian Bale, Taika Waititi, Tessa Thompson, Luke Hemsworth, Russell Crowe, Brett Goldstein
-        </div>
-        <div class="five">
-          <div class="card-body">
-            <a href="./bookings.html" class="card-link">10:45</a>
-            <a href="./bookings.html" class="card-link">11:15</a>
-            <a href="./bookings.html" class="card-link">11:45</a>
-            <a href="./bookings.html" class="card-link">12:15</a>
-            <a href="./bookings.html" class="card-link">12:45</a>
-            <a href="./bookings.html" class="card-link">13:15</a>
-            <a href="./bookings.html" class="card-link">13:45</a>
-          </div>
-        </div>
-        <div class="six">
-          <li class="list-group-item">Running time: 1hr 33mins</li>
-          <li class="list-group-item">Today Thursday 1st September</li>
-        </div>
-      </div>
-      <br>
-      <br>
+      </section>
+      
+      
+      
+      
+      <script type="text/javascript">
+        
+      window.onscroll = function() {myFunction()};
+      
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
+      
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+      
+      </script>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script>
+      $(document).ready(function(){
+        $(".mob-menu").click(function(){
+          $('.nav').slideToggle(1000);
+        });
+      });
+      </script>
+
       <div class="mt-auto">
-        <footer class = "footer-custom">
-          <div class="row border-top">
+        <footer class = "bg-dark" style="color:rgb(198, 198, 198);padding-left: 20px; padding-right: 20px;padding-top: 10px;">
+          <div class="row">
             <div class="col-6 col-md-3 mb-3 mx-2">
               <h5>Opening Times</h5>
               <ul class="nav flex-column">
-                <li class="nav-item mb-2">Monday - Friday: 9am - 10pm</li>
-                <li class="nav-item mb-2">Saturday: 9am - 11pm</li>
-                <li class="nav-item mb-2">Sunday: Closed</li>
+                <li class="nav-item mb-2"><Strong>Monday - Friday:</Strong> 9am - 10pm</li>
+                <li class="nav-item mb-2"><Strong>Saturday:</Strong> 9am - 11pm</li>
+                <li class="nav-item mb-2"><Strong>Sunday:</Strong> Closed</li>
               </ul>
             </div>
-      
+
             <div class="col-6 col-md-2 mb-3">
               <h5>Legal</h5>
               <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="/pages/footer-pages/t&c.html" class="nav-link p-0 link-light">Terms & Conditions</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-light">Cookie Policy</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-light">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="/pages/footer-pages/t&c.html" class="nav-link p-0 link-light" style="color: rgb(198, 198, 198);">Terms & Conditions</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-light" style="color: rgb(198, 198, 198);">Cookie Policy</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-light" style="color: rgb(198, 198, 198);">FAQs</a></li>
               </ul>
             </div>
-      
+
             <div class="col-6 col-md-2 mb-3">
               <h5>Corporate</h5>
               <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-light">Careers</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-light">Franchising</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-light">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-light" style="color: rgb(198, 198, 198);">Careers</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-light" style="color: rgb(198, 198, 198);">Franchising</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 link-light" style="color: rgb(198, 198, 198);">Pricing</a></li>
               </ul>
             </div>
-      
+
             <div class="col-md-3 offset-md-1 mb-3">
               <form>
-                <h5>Subscribe to our newsletter</h5>
-                <p>Hear about the newest films and events before anyone else!</p>
+                <h5 style="color: rgb(198, 198, 198);">Subscribe to our newsletter</h5>
+                <p style="color: rgb(198, 198, 198);">Hear about the newest films and events before anyone else!</p>
                 <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                  <label for="newsletter1" class="visually-hidden">Email address</label>
+                  <label for="newsletter1" class="visually-hidden" style="color: rgb(198, 198, 198);">Email address</label>
                   <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
                   <button class="btn btn-primary" type="button">Subscribe</button>
                 </div>
               </form>
             </div>
           </div>
-      
+
           <div class="d-flex flex-column flex-sm-row justify-content-between border-top">
             <p>&copy; 2022 Company, Inc. All rights reserved.</p>
             <ul class="list-unstyled d-flex">
@@ -330,7 +473,10 @@
           </div>
         </footer>
       </div>
+    
 
-        
-    </body>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body>
 </html>
