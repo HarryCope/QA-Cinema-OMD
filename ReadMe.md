@@ -150,13 +150,6 @@ Select pipeline build
 
 Set up the pipeline to function using a fork of this repository https://github.com/HarryCope/QA-Cinema-OMD
 
-Ensure your pipeline:
-
-```
-Is expecting a Github Webhook trigger (GitHub hook trigger for GITScm polling)
-Is set up to pull the Jenkinsfile from SCM and is pointing at the 'main' branch (defaults to master)
-```
-
 Set up a github webHook on your forked repo to function with your main branch of the repository
 
 Save the pipeline
@@ -215,23 +208,16 @@ WantedBy=multi-user.target' > /home/jenkins/TheApp.service
 
 Push the changes up to github
 
-
-Note: This is secure because our database is not open to public accessiblility,
-and our SSH keys used during the pipeline only exist on the instances, the key names used to connect to the instances remain secure.
-
-
 --------------------------------------------------------------------------------
 
-Go back to `<jenkins-instance-IP>:8080`
-
-Your build should be triggered by the GitHub Webhook
+Back on Jenkins your build should be triggered by the GitHub Webhook
 
 You can click on the boxes to see the output of the stages
 
 When it finishes the app will be on port 8080 on the app instances public IP
 	
-You can make changes to the Jenkinsfile to change the pipeline
-
+Jenkis should now be successfully setup on your machine to build from the dev branch (Change this is the Jenkins file to set to main branch) if Jenkins
+does not build automatically then you may need to foracea build via the dashboard.
 
 
 
