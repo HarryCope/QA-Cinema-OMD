@@ -77,32 +77,3 @@ const updateBooking = () => {
         })
         .catch(err => console.error(`error ${err}`));
 };
-
-const updatePokemon = () => {
-    const editPokemonId = editPokemonSelect.value;
-    const editPokemonName = editPokemonName.value;
-    const editPokemonType = editPokemonType.value;
-    const editPokemonLevel = editPokemonLevel.value;
-    const editPokemonHeldItem = editPokemonHeldItem.value;
-
-    let data = {
-        "name": editPokemonName,
-        "type": editPokemonType,
-        "level": editPokemonLevel,
-        "heldItem": editPokemonHeldItem
-    }
-
-    fetch(`${pokeUrl}/updatePokemon/${editPokemonId}`, {
-        method: "PUT",
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-        .then(response => response.json())
-        .then(model => {
-            console.log(model)
-            refresh();
-        })
-        .catch(err => console.error(`error ${err}`));
-};
