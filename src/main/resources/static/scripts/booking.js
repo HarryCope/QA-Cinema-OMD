@@ -56,6 +56,7 @@ const updateBooking = () => {
     const updateBookingTime = editBookingTime.value;
     const updateBookingPrice = editBookingPrice.value;
 
+    console.log(updateBookingTime);
     let bookingData1 = {
         "film_Id": updateFilmBookingId,
         "bookingSeatNumber": updateBookingSeatNumber,
