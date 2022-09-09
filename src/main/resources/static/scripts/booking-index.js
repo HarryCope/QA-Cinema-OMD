@@ -833,6 +833,3 @@ const createBooking2 = () => {
                                 .catch(err => console.error(`error ${err}`));
                                 console.log(seatsIndex)
                           };
-        
-    
-      
